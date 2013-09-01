@@ -6,7 +6,7 @@
 #include <dlfcn.h>
 #include "spf/float.cc"
 
-//extern void mains();
+// extern void mains();
 
 #ifndef O_BINARY
 #define O_BINARY 0

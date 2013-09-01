@@ -237,11 +237,26 @@ fdef("W@",2,0,Wload)
 		retq
 
 fdef("2@",2,0,_2load)
-		mov		8(%rbp),%rdx
+		mov		8(%rax),%rdx
 		lea		-8(%rbp),%rbp
 		mov		%rdx,(%rbp)
 		mov		(%rax),%rax
 		ret
+
+fdef("2!",2,0,_2store)
+		mov 	(%rbp),%rdx
+		mov 	%rdx,(%rax)
+		mov 	8(%rbp),%rdx
+		mov 	%rdx,8(%rax)
+		lea		24(%rbp),%rbp
+		mov 	-8(%rbp),%rax
+		ret
+// MOV     EDX , 0 [EBP]
+// MOV     [EAX] , EDX
+// MOV     EDX , 4 [EBP]
+// MOV     4 [EAX] , EDX
+// LEA     EBP , C [EBP]
+// MOV     EAX , FC [EBP]
 
 fdef("L!",2,0,Lsave)
 /* x a-addr --  */
@@ -437,6 +452,22 @@ fdef("/",1,0,rsl)
 		cqto
 		idiv %rcx
 		lea 4*2(%rbp),%rbp
+		ret
+
+fdef("2/",2,0,one_rshift)
+		shr		$1,%rax
+		ret
+fdef("2*",2,0,one_lshift)
+		shl		$1,%rax
+		ret
+
+fdef("*/",2,0,mul_rsl)
+		mov 	%rax,%rcx
+		mov		8(%rbp),%rax
+		imull	(%rbp)
+		cqto
+		idiv 	%rcx
+		lea 	16(%rbp),%rbp
 		ret
 
 fdef("MOD",3,0,MOD)
@@ -694,7 +725,12 @@ fdef("RP!",3,0,RPsave)
 		lea 4*2(%rbp),%rbp
 		jmpq *%rbx
 
-fdef("TlsIndex!",9,0,TlsIndexSet)
+fdef("UP@",3,0,UPGet)
+	lea    -8(%rbp),%rbp
+	mov		%r14,%rax
+	ret
+
+fdef("UP!",3,0,UPSet)
 	mov	%rax,%r14
 	jmp	DROP
 
@@ -1040,7 +1076,7 @@ fdef("SOURCE-ID",0x9 ,0 ,SOURCEsubID)
  call _USERsubVALUEsubCODE
  .int T_SOURCEsubID-main_task
  call _TOUSERsubVALUEsubCODE
- 
+
 fdef("PAD",0x3 ,0 ,PAD)
  call _USERsubCODE
  .int T_PAD-main_task
@@ -1173,8 +1209,8 @@ fdef("_USER-VALUE-CODE",0x10 ,0 ,_USERsubVALUEsubCODE)
 		mov (%rax),%eax
 		retq
 fdef("USER+",0x5 ,0 ,USERadd)
- .byte 0x3 ,0xC7 
- .byte 0xC3 
+ .byte 0x3 ,0xC7
+ .byte 0xC3
 fdef("_USER-CODE",0xA ,0 ,_USERsubCODE)
        lea	-4*2(%rbp),%rbp
 		mov %rax,(%rbp)
@@ -1214,7 +1250,7 @@ fdef("_CREATE-CODE",0xC ,0 ,_CREATEsubCODE)
 	retq
 
 fdef("VOC-LIST",0x8 ,0 ,VOCsubLIST)
- call _CREATEsubCODE 
+ call _CREATEsubCODE
  .quad T_FORTH
 
 fdef("BYE",0x3 ,0 ,BYE)
@@ -1223,14 +1259,14 @@ fdef("BYE",0x3 ,0 ,BYE)
 fdef("FORTH-WORDLIST",14 ,0 ,FORTHsubWORDLIST)
  call _VALUEsubCODE
  .int T_FORTH+4
- call _TOVALUEsubCODE 
+ call _TOVALUEsubCODE
 
 fdef("LAST",4 ,0 , LAST)
- call _CREATEsubCODE 
+ call _CREATEsubCODE
  .quad LastNFA
 
 fdef("USER-OFFS",9 ,0 ,USERsubOFFS)
- call _CREATEsubCODE 
+ call _CREATEsubCODE
  .quad reserve+MUSEROFFS
 
 fdef("UPPER_V",0x7 ,0 ,UPPER_V)
@@ -1240,7 +1276,7 @@ fdef("UPPER_V",0x7 ,0 ,UPPER_V)
 fdef("TCYDP0",6 ,0 ,TCYDP0)
  call _VALUEsubCODE
  .int T_YDP0
- call _TOVALUEsubCODE 
+ call _TOVALUEsubCODE
 
 // ================================================================================================
 // Функции из сишных либ будем подключать тут.
@@ -1248,7 +1284,7 @@ fdef("TCYDP0",6 ,0 ,TCYDP0)
 // Сокеты
 // c_sock_open (int port,char * iaddr)
 // c_sock_lconnect (int port)
-// c_getmyip 
+// c_getmyip
 // c_create_server (int port)
 // c_sock_accept
 // c_sock_listen
@@ -1313,23 +1349,19 @@ fdef("FORK",4 ,0 ,FORK)
 
 // ================================================================================================
 // Дополнительные ассемблерные команды
-fdef("2/",2,0,one_rshift)
-		shr		$1,%eax
-		ret
-fdef("2*",2,0,one_lshift)
-		shl		$1,%eax
-		ret
+
+
 // ================================================================================================
 
 fdef("IMAGE-BEGIN",11 ,0 ,IMAGEBEGIN)
  call _VALUEsubCODE
  .int main
- call _TOVALUEsubCODE 
+ call _TOVALUEsubCODE
 
 //mdef("DP",0x2 ,0 ,0+1,DP)
 //mdef("DP",0x2 ,0 ,RPload-3,DP)
 fdef("DP",0x2 ,0 ,DP)
- call _CREATEsubCODE 
+ call _CREATEsubCODE
  .quad DP_BUFF
 
 fdef("NNN",3 ,0 , NNN)

@@ -51,25 +51,25 @@ Idx Name          Size      VMA               LMA               File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
  23 .got.plt      00000148  0000000000603210  0000000000603210  00003210  2**3
                   CONTENTS, ALLOC, LOAD, DATA
- 24 .data         0000a088  0000000000603360  0000000000603360  00003360  2**5
+ 24 .data         0000a0e8  0000000000603360  0000000000603360  00003360  2**5
                   CONTENTS, ALLOC, LOAD, DATA
- 25 .bss          009cf040  000000000060d400  000000000060d400  0000d3e8  2**5
+ 25 .bss          009cf040  000000000060d460  000000000060d460  0000d448  2**5
                   ALLOC
- 26 .comment      00000038  0000000000000000  0000000000000000  0000d3e8  2**0
+ 26 .comment      00000038  0000000000000000  0000000000000000  0000d448  2**0
                   CONTENTS, READONLY
- 27 .debug_aranges 000000a0  0000000000000000  0000000000000000  0000d420  2**4
+ 27 .debug_aranges 000000a0  0000000000000000  0000000000000000  0000d480  2**4
                   CONTENTS, READONLY, DEBUGGING
- 28 .debug_info   00001880  0000000000000000  0000000000000000  0000d4c0  2**0
+ 28 .debug_info   00001880  0000000000000000  0000000000000000  0000d520  2**0
                   CONTENTS, READONLY, DEBUGGING
- 29 .debug_abbrev 000004fa  0000000000000000  0000000000000000  0000ed40  2**0
+ 29 .debug_abbrev 000004fa  0000000000000000  0000000000000000  0000eda0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 30 .debug_line   000016d9  0000000000000000  0000000000000000  0000f23a  2**0
+ 30 .debug_line   000016ec  0000000000000000  0000000000000000  0000f29a  2**0
                   CONTENTS, READONLY, DEBUGGING
- 31 .debug_str    000009eb  0000000000000000  0000000000000000  00010913  2**0
+ 31 .debug_str    000009eb  0000000000000000  0000000000000000  00010986  2**0
                   CONTENTS, READONLY, DEBUGGING
- 32 .debug_loc    0000154c  0000000000000000  0000000000000000  000112fe  2**0
+ 32 .debug_loc    0000154c  0000000000000000  0000000000000000  00011371  2**0
                   CONTENTS, READONLY, DEBUGGING
- 33 .debug_ranges 00000040  0000000000000000  0000000000000000  00012850  2**4
+ 33 .debug_ranges 00000040  0000000000000000  0000000000000000  000128c0  2**4
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .init:
@@ -318,9 +318,9 @@ Disassembly of section .text:
   40101f:	90                   	nop
 
 0000000000401020 <deregister_tm_clones>:
-  401020:	b8 ef d3 60 00       	mov    $0x60d3ef,%eax
+  401020:	b8 4f d4 60 00       	mov    $0x60d44f,%eax
   401025:	55                   	push   %rbp
-  401026:	48 2d e8 d3 60 00    	sub    $0x60d3e8,%rax
+  401026:	48 2d 48 d4 60 00    	sub    $0x60d448,%rax
   40102c:	48 83 f8 0e          	cmp    $0xe,%rax
   401030:	48 89 e5             	mov    %rsp,%rbp
   401033:	77 02                	ja     401037 <deregister_tm_clones+0x17>
@@ -330,14 +330,14 @@ Disassembly of section .text:
   40103c:	48 85 c0             	test   %rax,%rax
   40103f:	74 f4                	je     401035 <deregister_tm_clones+0x15>
   401041:	5d                   	pop    %rbp
-  401042:	bf e8 d3 60 00       	mov    $0x60d3e8,%edi
+  401042:	bf 48 d4 60 00       	mov    $0x60d448,%edi
   401047:	ff e0                	jmpq   *%rax
   401049:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
 
 0000000000401050 <register_tm_clones>:
-  401050:	b8 e8 d3 60 00       	mov    $0x60d3e8,%eax
+  401050:	b8 48 d4 60 00       	mov    $0x60d448,%eax
   401055:	55                   	push   %rbp
-  401056:	48 2d e8 d3 60 00    	sub    $0x60d3e8,%rax
+  401056:	48 2d 48 d4 60 00    	sub    $0x60d448,%rax
   40105c:	48 c1 f8 03          	sar    $0x3,%rax
   401060:	48 89 e5             	mov    %rsp,%rbp
   401063:	48 89 c2             	mov    %rax,%rdx
@@ -352,18 +352,18 @@ Disassembly of section .text:
   40107c:	48 85 d2             	test   %rdx,%rdx
   40107f:	74 f4                	je     401075 <register_tm_clones+0x25>
   401081:	5d                   	pop    %rbp
-  401082:	bf e8 d3 60 00       	mov    $0x60d3e8,%edi
+  401082:	bf 48 d4 60 00       	mov    $0x60d448,%edi
   401087:	ff e2                	jmpq   *%rdx
   401089:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
 
 0000000000401090 <__do_global_dtors_aux>:
-  401090:	80 3d 71 c3 20 00 00 	cmpb   $0x0,0x20c371(%rip)        # 60d408 <completed.6092>
+  401090:	80 3d d1 c3 20 00 00 	cmpb   $0x0,0x20c3d1(%rip)        # 60d468 <completed.6092>
   401097:	75 11                	jne    4010aa <__do_global_dtors_aux+0x1a>
   401099:	55                   	push   %rbp
   40109a:	48 89 e5             	mov    %rsp,%rbp
   40109d:	e8 7e ff ff ff       	callq  401020 <deregister_tm_clones>
   4010a2:	5d                   	pop    %rbp
-  4010a3:	c6 05 5e c3 20 00 01 	movb   $0x1,0x20c35e(%rip)        # 60d408 <completed.6092>
+  4010a3:	c6 05 be c3 20 00 01 	movb   $0x1,0x20c3be(%rip)        # 60d468 <completed.6092>
   4010aa:	f3 c3                	repz retq 
   4010ac:	0f 1f 40 00          	nopl   0x0(%rax)
 
@@ -412,28 +412,28 @@ amain:
         push %rbx
   4010e9:	53                   	push   %rbx
 		mov	%rsp,BYELEVEL
-  4010ea:	48 89 24 25 28 d4 60 	mov    %rsp,0x60d428
+  4010ea:	48 89 24 25 88 d4 60 	mov    %rsp,0x60d488
   4010f1:	00 
 
 		xor %eax,%eax
   4010f2:	31 c0                	xor    %eax,%eax
         mov $_Stekc+STACK_SIZE-0x20,%rbp
-  4010f4:	48 c7 c5 10 24 61 00 	mov    $0x612410,%rbp
+  4010f4:	48 c7 c5 70 24 61 00 	mov    $0x612470,%rbp
         mov %esp,T_R0
-  4010fb:	89 24 25 48 4c 60 00 	mov    %esp,0x604c48
+  4010fb:	89 24 25 a6 4c 60 00 	mov    %esp,0x604ca6
 		mov $main_task,%r14
-  401102:	49 c7 c6 48 4c 60 00 	mov    $0x604c48,%r14
+  401102:	49 c7 c6 a6 4c 60 00 	mov    $0x604ca6,%r14
 
    		mov		%rsp,%rax
   401109:	48 89 e0             	mov    %rsp,%rax
 		and $0xffffffff80000000,%rax
   40110c:	48 25 00 00 00 80    	and    $0xffffffff80000000,%rax
 		mov		%rax,HSPSAVE
-  401112:	48 89 04 25 20 d4 60 	mov    %rax,0x60d420
+  401112:	48 89 04 25 80 d4 60 	mov    %rax,0x60d480
   401119:	00 
 
         call	LastCFA
-  40111a:	e8 37 4f 20 00       	callq  606056 <INIT>
+  40111a:	e8 95 4f 20 00       	callq  6060b4 <INIT>
 			div		%ecx
   40111f:	f7 f1                	div    %ecx
 			div		%rcx
@@ -447,7 +447,7 @@ amain:
 
 
 MBYE:	mov	BYELEVEL,%rsp
-  40112b:	48 8b 24 25 28 d4 60 	mov    0x60d428,%rsp
+  40112b:	48 8b 24 25 88 d4 60 	mov    0x60d488,%rsp
   401132:	00 
 		pop %rbx
   401133:	5b                   	pop    %rbx
@@ -467,11 +467,11 @@ void _0e()
 {	FP--;
   401138:	55                   	push   %rbp
   401139:	48 89 e5             	mov    %rsp,%rbp
-  40113c:	48 8b 05 fd 92 bd 00 	mov    0xbd92fd(%rip),%rax        # fda440 <FP>
+  40113c:	48 8b 05 5d 93 bd 00 	mov    0xbd935d(%rip),%rax        # fda4a0 <FP>
   401143:	48 83 e8 08          	sub    $0x8,%rax
-  401147:	48 89 05 f2 92 bd 00 	mov    %rax,0xbd92f2(%rip)        # fda440 <FP>
+  401147:	48 89 05 52 93 bd 00 	mov    %rax,0xbd9352(%rip)        # fda4a0 <FP>
 	FP[0] = 0.0;
-  40114e:	48 8b 15 eb 92 bd 00 	mov    0xbd92eb(%rip),%rdx        # fda440 <FP>
+  40114e:	48 8b 15 4b 93 bd 00 	mov    0xbd934b(%rip),%rdx        # fda4a0 <FP>
   401155:	b8 00 00 00 00       	mov    $0x0,%eax
   40115a:	48 89 02             	mov    %rax,(%rdx)
 }
@@ -484,11 +484,11 @@ void x1e()
 {	FP--;
   40115f:	55                   	push   %rbp
   401160:	48 89 e5             	mov    %rsp,%rbp
-  401163:	48 8b 05 d6 92 bd 00 	mov    0xbd92d6(%rip),%rax        # fda440 <FP>
+  401163:	48 8b 05 36 93 bd 00 	mov    0xbd9336(%rip),%rax        # fda4a0 <FP>
   40116a:	48 83 e8 08          	sub    $0x8,%rax
-  40116e:	48 89 05 cb 92 bd 00 	mov    %rax,0xbd92cb(%rip)        # fda440 <FP>
+  40116e:	48 89 05 2b 93 bd 00 	mov    %rax,0xbd932b(%rip)        # fda4a0 <FP>
 	FP[0] = 1.0;
-  401175:	48 8b 15 c4 92 bd 00 	mov    0xbd92c4(%rip),%rdx        # fda440 <FP>
+  401175:	48 8b 15 24 93 bd 00 	mov    0xbd9324(%rip),%rdx        # fda4a0 <FP>
   40117c:	48 b8 00 00 00 00 00 	movabs $0x3ff0000000000000,%rax
   401183:	00 f0 3f 
   401186:	48 89 02             	mov    %rax,(%rdx)
@@ -506,11 +506,11 @@ int ZTO_FLOAT(char *szInput)
   401190:	48 83 ec 28          	sub    $0x28,%rsp
   401194:	48 89 7d d8          	mov    %rdi,-0x28(%rbp)
 	FP--;
-  401198:	48 8b 05 a1 92 bd 00 	mov    0xbd92a1(%rip),%rax        # fda440 <FP>
+  401198:	48 8b 05 01 93 bd 00 	mov    0xbd9301(%rip),%rax        # fda4a0 <FP>
   40119f:	48 83 e8 08          	sub    $0x8,%rax
-  4011a3:	48 89 05 96 92 bd 00 	mov    %rax,0xbd9296(%rip)        # fda440 <FP>
+  4011a3:	48 89 05 f6 92 bd 00 	mov    %rax,0xbd92f6(%rip)        # fda4a0 <FP>
 	FP[0] = strtod (szInput,&pEnd);
-  4011aa:	48 8b 1d 8f 92 bd 00 	mov    0xbd928f(%rip),%rbx        # fda440 <FP>
+  4011aa:	48 8b 1d ef 92 bd 00 	mov    0xbd92ef(%rip),%rbx        # fda4a0 <FP>
   4011b1:	48 8d 55 e8          	lea    -0x18(%rbp),%rdx
   4011b5:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
   4011b9:	48 89 d6             	mov    %rdx,%rsi
@@ -554,31 +554,31 @@ char * F_dot_STR()
   40120a:	48 89 e5             	mov    %rsp,%rbp
   40120d:	48 83 ec 10          	sub    $0x10,%rsp
    sprintf (buf,"%lf",*FP++);
-  401211:	48 8b 15 28 92 bd 00 	mov    0xbd9228(%rip),%rdx        # fda440 <FP>
+  401211:	48 8b 15 88 92 bd 00 	mov    0xbd9288(%rip),%rdx        # fda4a0 <FP>
   401218:	48 8b 02             	mov    (%rdx),%rax
   40121b:	48 83 c2 08          	add    $0x8,%rdx
-  40121f:	48 89 15 1a 92 bd 00 	mov    %rdx,0xbd921a(%rip)        # fda440 <FP>
+  40121f:	48 89 15 7a 92 bd 00 	mov    %rdx,0xbd927a(%rip)        # fda4a0 <FP>
   401226:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
   40122a:	f2 0f 10 45 f8       	movsd  -0x8(%rbp),%xmm0
   40122f:	be bc 21 40 00       	mov    $0x4021bc,%esi
-  401234:	bf c0 c3 fd 00       	mov    $0xfdc3c0,%edi
+  401234:	bf 20 c4 fd 00       	mov    $0xfdc420,%edi
   401239:	b8 01 00 00 00       	mov    $0x1,%eax
   40123e:	e8 2d fd ff ff       	callq  400f70 <sprintf@plt>
    for(ii=0;buf[ii];ii++);
-  401243:	c7 05 6b b1 bd 00 00 	movl   $0x0,0xbdb16b(%rip)        # fdc3b8 <ii>
+  401243:	c7 05 cb b1 bd 00 00 	movl   $0x0,0xbdb1cb(%rip)        # fdc418 <ii>
   40124a:	00 00 00 
   40124d:	eb 0f                	jmp    40125e <F_dot_STR+0x55>
-  40124f:	8b 05 63 b1 bd 00    	mov    0xbdb163(%rip),%eax        # fdc3b8 <ii>
+  40124f:	8b 05 c3 b1 bd 00    	mov    0xbdb1c3(%rip),%eax        # fdc418 <ii>
   401255:	83 c0 01             	add    $0x1,%eax
-  401258:	89 05 5a b1 bd 00    	mov    %eax,0xbdb15a(%rip)        # fdc3b8 <ii>
-  40125e:	8b 05 54 b1 bd 00    	mov    0xbdb154(%rip),%eax        # fdc3b8 <ii>
+  401258:	89 05 ba b1 bd 00    	mov    %eax,0xbdb1ba(%rip)        # fdc418 <ii>
+  40125e:	8b 05 b4 b1 bd 00    	mov    0xbdb1b4(%rip),%eax        # fdc418 <ii>
   401264:	48 98                	cltq   
-  401266:	0f b6 80 c0 c3 fd 00 	movzbl 0xfdc3c0(%rax),%eax
+  401266:	0f b6 80 20 c4 fd 00 	movzbl 0xfdc420(%rax),%eax
   40126d:	84 c0                	test   %al,%al
   40126f:	75 de                	jne    40124f <F_dot_STR+0x46>
 // write (0,buf, ii);
    return &buf;
-  401271:	b8 c0 c3 fd 00       	mov    $0xfdc3c0,%eax
+  401271:	b8 20 c4 fd 00       	mov    $0xfdc420,%eax
 }
   401276:	c9                   	leaveq 
   401277:	c3                   	retq   
@@ -590,12 +590,12 @@ void f_store( double * sp0 )
   401278:	55                   	push   %rbp
   401279:	48 89 e5             	mov    %rsp,%rbp
   40127c:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
-  401280:	48 8b 15 b9 91 bd 00 	mov    0xbd91b9(%rip),%rdx        # fda440 <FP>
+  401280:	48 8b 15 19 92 bd 00 	mov    0xbd9219(%rip),%rdx        # fda4a0 <FP>
   401287:	48 8b 02             	mov    (%rdx),%rax
   40128a:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
   40128e:	48 89 01             	mov    %rax,(%rcx)
   401291:	48 8d 42 08          	lea    0x8(%rdx),%rax
-  401295:	48 89 05 a4 91 bd 00 	mov    %rax,0xbd91a4(%rip)        # fda440 <FP>
+  401295:	48 89 05 04 92 bd 00 	mov    %rax,0xbd9204(%rip)        # fda4a0 <FP>
 }
   40129c:	5d                   	pop    %rbp
   40129d:	c3                   	retq   
@@ -605,19 +605,19 @@ void f_plus()
 {   FP[1] += FP[0];
   40129e:	55                   	push   %rbp
   40129f:	48 89 e5             	mov    %rsp,%rbp
-  4012a2:	48 8b 05 97 91 bd 00 	mov    0xbd9197(%rip),%rax        # fda440 <FP>
+  4012a2:	48 8b 05 f7 91 bd 00 	mov    0xbd91f7(%rip),%rax        # fda4a0 <FP>
   4012a9:	48 8d 50 08          	lea    0x8(%rax),%rdx
-  4012ad:	48 8b 05 8c 91 bd 00 	mov    0xbd918c(%rip),%rax        # fda440 <FP>
+  4012ad:	48 8b 05 ec 91 bd 00 	mov    0xbd91ec(%rip),%rax        # fda4a0 <FP>
   4012b4:	48 83 c0 08          	add    $0x8,%rax
   4012b8:	f2 0f 10 08          	movsd  (%rax),%xmm1
-  4012bc:	48 8b 05 7d 91 bd 00 	mov    0xbd917d(%rip),%rax        # fda440 <FP>
+  4012bc:	48 8b 05 dd 91 bd 00 	mov    0xbd91dd(%rip),%rax        # fda4a0 <FP>
   4012c3:	f2 0f 10 00          	movsd  (%rax),%xmm0
   4012c7:	f2 0f 58 c1          	addsd  %xmm1,%xmm0
   4012cb:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
     FP++;
-  4012cf:	48 8b 05 6a 91 bd 00 	mov    0xbd916a(%rip),%rax        # fda440 <FP>
+  4012cf:	48 8b 05 ca 91 bd 00 	mov    0xbd91ca(%rip),%rax        # fda4a0 <FP>
   4012d6:	48 83 c0 08          	add    $0x8,%rax
-  4012da:	48 89 05 5f 91 bd 00 	mov    %rax,0xbd915f(%rip)        # fda440 <FP>
+  4012da:	48 89 05 bf 91 bd 00 	mov    %rax,0xbd91bf(%rip)        # fda4a0 <FP>
 }
   4012e1:	5d                   	pop    %rbp
   4012e2:	c3                   	retq   
@@ -627,19 +627,19 @@ void f_minus()
 {   FP[1] -= FP[0];
   4012e3:	55                   	push   %rbp
   4012e4:	48 89 e5             	mov    %rsp,%rbp
-  4012e7:	48 8b 05 52 91 bd 00 	mov    0xbd9152(%rip),%rax        # fda440 <FP>
+  4012e7:	48 8b 05 b2 91 bd 00 	mov    0xbd91b2(%rip),%rax        # fda4a0 <FP>
   4012ee:	48 8d 50 08          	lea    0x8(%rax),%rdx
-  4012f2:	48 8b 05 47 91 bd 00 	mov    0xbd9147(%rip),%rax        # fda440 <FP>
+  4012f2:	48 8b 05 a7 91 bd 00 	mov    0xbd91a7(%rip),%rax        # fda4a0 <FP>
   4012f9:	48 83 c0 08          	add    $0x8,%rax
   4012fd:	f2 0f 10 00          	movsd  (%rax),%xmm0
-  401301:	48 8b 05 38 91 bd 00 	mov    0xbd9138(%rip),%rax        # fda440 <FP>
+  401301:	48 8b 05 98 91 bd 00 	mov    0xbd9198(%rip),%rax        # fda4a0 <FP>
   401308:	f2 0f 10 08          	movsd  (%rax),%xmm1
   40130c:	f2 0f 5c c1          	subsd  %xmm1,%xmm0
   401310:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
     FP++;
-  401314:	48 8b 05 25 91 bd 00 	mov    0xbd9125(%rip),%rax        # fda440 <FP>
+  401314:	48 8b 05 85 91 bd 00 	mov    0xbd9185(%rip),%rax        # fda4a0 <FP>
   40131b:	48 83 c0 08          	add    $0x8,%rax
-  40131f:	48 89 05 1a 91 bd 00 	mov    %rax,0xbd911a(%rip)        # fda440 <FP>
+  40131f:	48 89 05 7a 91 bd 00 	mov    %rax,0xbd917a(%rip)        # fda4a0 <FP>
 }
   401326:	5d                   	pop    %rbp
   401327:	c3                   	retq   
@@ -650,19 +650,19 @@ void f_star()
 {   FP[1] *= FP[0];
   401328:	55                   	push   %rbp
   401329:	48 89 e5             	mov    %rsp,%rbp
-  40132c:	48 8b 05 0d 91 bd 00 	mov    0xbd910d(%rip),%rax        # fda440 <FP>
+  40132c:	48 8b 05 6d 91 bd 00 	mov    0xbd916d(%rip),%rax        # fda4a0 <FP>
   401333:	48 8d 50 08          	lea    0x8(%rax),%rdx
-  401337:	48 8b 05 02 91 bd 00 	mov    0xbd9102(%rip),%rax        # fda440 <FP>
+  401337:	48 8b 05 62 91 bd 00 	mov    0xbd9162(%rip),%rax        # fda4a0 <FP>
   40133e:	48 83 c0 08          	add    $0x8,%rax
   401342:	f2 0f 10 08          	movsd  (%rax),%xmm1
-  401346:	48 8b 05 f3 90 bd 00 	mov    0xbd90f3(%rip),%rax        # fda440 <FP>
+  401346:	48 8b 05 53 91 bd 00 	mov    0xbd9153(%rip),%rax        # fda4a0 <FP>
   40134d:	f2 0f 10 00          	movsd  (%rax),%xmm0
   401351:	f2 0f 59 c1          	mulsd  %xmm1,%xmm0
   401355:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
     FP++;
-  401359:	48 8b 05 e0 90 bd 00 	mov    0xbd90e0(%rip),%rax        # fda440 <FP>
+  401359:	48 8b 05 40 91 bd 00 	mov    0xbd9140(%rip),%rax        # fda4a0 <FP>
   401360:	48 83 c0 08          	add    $0x8,%rax
-  401364:	48 89 05 d5 90 bd 00 	mov    %rax,0xbd90d5(%rip)        # fda440 <FP>
+  401364:	48 89 05 35 91 bd 00 	mov    %rax,0xbd9135(%rip)        # fda4a0 <FP>
 }
   40136b:	5d                   	pop    %rbp
   40136c:	c3                   	retq   
@@ -673,19 +673,19 @@ void f_slash()
 {   FP[1] /= FP[0];
   40136d:	55                   	push   %rbp
   40136e:	48 89 e5             	mov    %rsp,%rbp
-  401371:	48 8b 05 c8 90 bd 00 	mov    0xbd90c8(%rip),%rax        # fda440 <FP>
+  401371:	48 8b 05 28 91 bd 00 	mov    0xbd9128(%rip),%rax        # fda4a0 <FP>
   401378:	48 8d 50 08          	lea    0x8(%rax),%rdx
-  40137c:	48 8b 05 bd 90 bd 00 	mov    0xbd90bd(%rip),%rax        # fda440 <FP>
+  40137c:	48 8b 05 1d 91 bd 00 	mov    0xbd911d(%rip),%rax        # fda4a0 <FP>
   401383:	48 83 c0 08          	add    $0x8,%rax
   401387:	f2 0f 10 00          	movsd  (%rax),%xmm0
-  40138b:	48 8b 05 ae 90 bd 00 	mov    0xbd90ae(%rip),%rax        # fda440 <FP>
+  40138b:	48 8b 05 0e 91 bd 00 	mov    0xbd910e(%rip),%rax        # fda4a0 <FP>
   401392:	f2 0f 10 08          	movsd  (%rax),%xmm1
   401396:	f2 0f 5e c1          	divsd  %xmm1,%xmm0
   40139a:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
     FP++;
-  40139e:	48 8b 05 9b 90 bd 00 	mov    0xbd909b(%rip),%rax        # fda440 <FP>
+  40139e:	48 8b 05 fb 90 bd 00 	mov    0xbd90fb(%rip),%rax        # fda4a0 <FP>
   4013a5:	48 83 c0 08          	add    $0x8,%rax
-  4013a9:	48 89 05 90 90 bd 00 	mov    %rax,0xbd9090(%rip)        # fda440 <FP>
+  4013a9:	48 89 05 f0 90 bd 00 	mov    %rax,0xbd90f0(%rip)        # fda4a0 <FP>
 }
   4013b0:	5d                   	pop    %rbp
   4013b1:	c3                   	retq   
@@ -696,14 +696,14 @@ int f_zero_less()
 {  return *FP++ < 0 ;
   4013b2:	55                   	push   %rbp
   4013b3:	48 89 e5             	mov    %rsp,%rbp
-  4013b6:	48 8b 05 83 90 bd 00 	mov    0xbd9083(%rip),%rax        # fda440 <FP>
+  4013b6:	48 8b 05 e3 90 bd 00 	mov    0xbd90e3(%rip),%rax        # fda4a0 <FP>
   4013bd:	f2 0f 10 08          	movsd  (%rax),%xmm1
   4013c1:	66 0f 57 c0          	xorpd  %xmm0,%xmm0
   4013c5:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
   4013c9:	0f 97 c2             	seta   %dl
   4013cc:	0f b6 d2             	movzbl %dl,%edx
   4013cf:	48 83 c0 08          	add    $0x8,%rax
-  4013d3:	48 89 05 66 90 bd 00 	mov    %rax,0xbd9066(%rip)        # fda440 <FP>
+  4013d3:	48 89 05 c6 90 bd 00 	mov    %rax,0xbd90c6(%rip)        # fda4a0 <FP>
   4013da:	89 d0                	mov    %edx,%eax
 }
   4013dc:	5d                   	pop    %rbp
@@ -714,14 +714,14 @@ int f_zero_equal()
 {  return *FP++ < 0 ;
   4013de:	55                   	push   %rbp
   4013df:	48 89 e5             	mov    %rsp,%rbp
-  4013e2:	48 8b 05 57 90 bd 00 	mov    0xbd9057(%rip),%rax        # fda440 <FP>
+  4013e2:	48 8b 05 b7 90 bd 00 	mov    0xbd90b7(%rip),%rax        # fda4a0 <FP>
   4013e9:	f2 0f 10 08          	movsd  (%rax),%xmm1
   4013ed:	66 0f 57 c0          	xorpd  %xmm0,%xmm0
   4013f1:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
   4013f5:	0f 97 c2             	seta   %dl
   4013f8:	0f b6 d2             	movzbl %dl,%edx
   4013fb:	48 83 c0 08          	add    $0x8,%rax
-  4013ff:	48 89 05 3a 90 bd 00 	mov    %rax,0xbd903a(%rip)        # fda440 <FP>
+  4013ff:	48 89 05 9a 90 bd 00 	mov    %rax,0xbd909a(%rip)        # fda4a0 <FP>
   401406:	89 d0                	mov    %edx,%eax
 }
   401408:	5d                   	pop    %rbp
@@ -733,19 +733,19 @@ int f_less_than()
   40140a:	55                   	push   %rbp
   40140b:	48 89 e5             	mov    %rsp,%rbp
  sp0 = FP[1] < FP[0] ;
-  40140e:	48 8b 05 2b 90 bd 00 	mov    0xbd902b(%rip),%rax        # fda440 <FP>
+  40140e:	48 8b 05 8b 90 bd 00 	mov    0xbd908b(%rip),%rax        # fda4a0 <FP>
   401415:	48 83 c0 08          	add    $0x8,%rax
   401419:	f2 0f 10 08          	movsd  (%rax),%xmm1
-  40141d:	48 8b 05 1c 90 bd 00 	mov    0xbd901c(%rip),%rax        # fda440 <FP>
+  40141d:	48 8b 05 7c 90 bd 00 	mov    0xbd907c(%rip),%rax        # fda4a0 <FP>
   401424:	f2 0f 10 00          	movsd  (%rax),%xmm0
   401428:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
   40142c:	0f 97 c0             	seta   %al
   40142f:	0f b6 c0             	movzbl %al,%eax
   401432:	89 45 fc             	mov    %eax,-0x4(%rbp)
  FP += 2;
-  401435:	48 8b 05 04 90 bd 00 	mov    0xbd9004(%rip),%rax        # fda440 <FP>
+  401435:	48 8b 05 64 90 bd 00 	mov    0xbd9064(%rip),%rax        # fda4a0 <FP>
   40143c:	48 83 c0 10          	add    $0x10,%rax
-  401440:	48 89 05 f9 8f bd 00 	mov    %rax,0xbd8ff9(%rip)        # fda440 <FP>
+  401440:	48 89 05 59 90 bd 00 	mov    %rax,0xbd9059(%rip)        # fda4a0 <FP>
  return sp0;
   401447:	8b 45 fc             	mov    -0x4(%rbp),%eax
 }
@@ -758,7 +758,7 @@ long long f_to_d()
 {  return (long long)(*FP);
   40144c:	55                   	push   %rbp
   40144d:	48 89 e5             	mov    %rsp,%rbp
-  401450:	48 8b 05 e9 8f bd 00 	mov    0xbd8fe9(%rip),%rax        # fda440 <FP>
+  401450:	48 8b 05 49 90 bd 00 	mov    0xbd9049(%rip),%rax        # fda4a0 <FP>
   401457:	f2 0f 10 00          	movsd  (%rax),%xmm0
   40145b:	f2 48 0f 2c c0       	cvttsd2si %xmm0,%rax
 }
@@ -772,10 +772,10 @@ void f_fetch( double * sp0 )
   401462:	55                   	push   %rbp
   401463:	48 89 e5             	mov    %rsp,%rbp
   401466:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
-  40146a:	48 8b 05 cf 8f bd 00 	mov    0xbd8fcf(%rip),%rax        # fda440 <FP>
+  40146a:	48 8b 05 2f 90 bd 00 	mov    0xbd902f(%rip),%rax        # fda4a0 <FP>
   401471:	48 83 e8 08          	sub    $0x8,%rax
-  401475:	48 89 05 c4 8f bd 00 	mov    %rax,0xbd8fc4(%rip)        # fda440 <FP>
-  40147c:	48 8b 15 bd 8f bd 00 	mov    0xbd8fbd(%rip),%rdx        # fda440 <FP>
+  401475:	48 89 05 24 90 bd 00 	mov    %rax,0xbd9024(%rip)        # fda4a0 <FP>
+  40147c:	48 8b 15 1d 90 bd 00 	mov    0xbd901d(%rip),%rdx        # fda4a0 <FP>
   401483:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
   401487:	48 8b 00             	mov    (%rax),%rax
   40148a:	48 89 02             	mov    %rax,(%rdx)
@@ -790,11 +790,11 @@ void ss_to_f ( int sp1, int sp0)
   401490:	48 89 e5             	mov    %rsp,%rbp
   401493:	89 7d fc             	mov    %edi,-0x4(%rbp)
   401496:	89 75 f8             	mov    %esi,-0x8(%rbp)
-  401499:	48 8b 05 a0 8f bd 00 	mov    0xbd8fa0(%rip),%rax        # fda440 <FP>
+  401499:	48 8b 05 00 90 bd 00 	mov    0xbd9000(%rip),%rax        # fda4a0 <FP>
   4014a0:	48 83 e8 08          	sub    $0x8,%rax
-  4014a4:	48 89 05 95 8f bd 00 	mov    %rax,0xbd8f95(%rip)        # fda440 <FP>
+  4014a4:	48 89 05 f5 8f bd 00 	mov    %rax,0xbd8ff5(%rip)        # fda4a0 <FP>
   FP[0] = (double)( ((long long)(sp0)>>32) + sp1 );
-  4014ab:	48 8b 05 8e 8f bd 00 	mov    0xbd8f8e(%rip),%rax        # fda440 <FP>
+  4014ab:	48 8b 05 ee 8f bd 00 	mov    0xbd8fee(%rip),%rax        # fda4a0 <FP>
   4014b2:	8b 55 f8             	mov    -0x8(%rbp),%edx
   4014b5:	48 63 d2             	movslq %edx,%rdx
   4014b8:	48 89 d1             	mov    %rdx,%rcx
@@ -815,11 +815,11 @@ void d_to_f ( long long sp)
   4014d3:	55                   	push   %rbp
   4014d4:	48 89 e5             	mov    %rsp,%rbp
   4014d7:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
-  4014db:	48 8b 05 5e 8f bd 00 	mov    0xbd8f5e(%rip),%rax        # fda440 <FP>
+  4014db:	48 8b 05 be 8f bd 00 	mov    0xbd8fbe(%rip),%rax        # fda4a0 <FP>
   4014e2:	48 83 e8 08          	sub    $0x8,%rax
-  4014e6:	48 89 05 53 8f bd 00 	mov    %rax,0xbd8f53(%rip)        # fda440 <FP>
+  4014e6:	48 89 05 b3 8f bd 00 	mov    %rax,0xbd8fb3(%rip)        # fda4a0 <FP>
   FP[0] = (double)sp;
-  4014ed:	48 8b 05 4c 8f bd 00 	mov    0xbd8f4c(%rip),%rax        # fda440 <FP>
+  4014ed:	48 8b 05 ac 8f bd 00 	mov    0xbd8fac(%rip),%rax        # fda4a0 <FP>
   4014f4:	f2 48 0f 2a 45 f8    	cvtsi2sdq -0x8(%rbp),%xmm0
   4014fa:	f2 0f 11 00          	movsd  %xmm0,(%rax)
 }
@@ -843,8 +843,8 @@ void f_init()
 { FP=&FPBuf[FPBufSize-2];
   40150b:	55                   	push   %rbp
   40150c:	48 89 e5             	mov    %rsp,%rbp
-  40150f:	48 c7 05 26 8f bd 00 	movq   $0xfdc3a0,0xbd8f26(%rip)        # fda440 <FP>
-  401516:	a0 c3 fd 00 
+  40150f:	48 c7 05 86 8f bd 00 	movq   $0xfdc400,0xbd8f86(%rip)        # fda4a0 <FP>
+  401516:	00 c4 fd 00 
 
 }
   40151a:	5d                   	pop    %rbp
@@ -857,10 +857,10 @@ void f_tst()
   40151c:	55                   	push   %rbp
   40151d:	48 89 e5             	mov    %rsp,%rbp
   401520:	b8 00 00 00 00       	mov    $0x0,%eax
-  401525:	e8 81 27 20 00       	callq  603cab <_1e>
+  401525:	e8 f1 27 20 00       	callq  603d1b <_1e>
 	Fdot();
   40152a:	b8 00 00 00 00       	mov    $0x0,%eax
-  40152f:	e8 29 b4 20 00       	callq  60c95d <Fdot>
+  40152f:	e8 87 b4 20 00       	callq  60c9bb <Fdot>
 }
   401534:	5d                   	pop    %rbp
   401535:	c3                   	retq   
@@ -1048,7 +1048,7 @@ int LACCEPT(char *p,int n)
   401655:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
   401659:	89 75 e4             	mov    %esi,-0x1c(%rbp)
   q = fgets (p, n, stdin);
-  40165c:	48 8b 15 9d bd 20 00 	mov    0x20bd9d(%rip),%rdx        # 60d400 <stdin@@GLIBC_2.2.5>
+  40165c:	48 8b 15 fd bd 20 00 	mov    0x20bdfd(%rip),%rdx        # 60d460 <stdin@@GLIBC_2.2.5>
   401663:	8b 4d e4             	mov    -0x1c(%rbp),%ecx
   401666:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
   40166a:	89 ce                	mov    %ecx,%esi
@@ -1080,7 +1080,7 @@ int LACCEPT(char *p,int n)
 char* LARGV1() {return ARGV1;}
   4016a6:	55                   	push   %rbp
   4016a7:	48 89 e5             	mov    %rsp,%rbp
-  4016aa:	48 8b 05 ff ac bd 00 	mov    0xbdacff(%rip),%rax        # fdc3b0 <ARGV1>
+  4016aa:	48 8b 05 5f ad bd 00 	mov    0xbdad5f(%rip),%rax        # fdc410 <ARGV1>
   4016b1:	5d                   	pop    %rbp
   4016b2:	c3                   	retq   
 
@@ -1118,7 +1118,7 @@ void save_term ()
   4016db:	55                   	push   %rbp
   4016dc:	48 89 e5             	mov    %rsp,%rbp
     tcgetattr(0, &tios0);
-  4016df:	be 00 c4 fd 00       	mov    $0xfdc400,%esi
+  4016df:	be 60 c4 fd 00       	mov    $0xfdc460,%esi
   4016e4:	bf 00 00 00 00       	mov    $0x0,%edi
   4016e9:	e8 22 f8 ff ff       	callq  400f10 <tcgetattr@plt>
 }
@@ -1132,7 +1132,7 @@ void restore_term ()
   4016f0:	55                   	push   %rbp
   4016f1:	48 89 e5             	mov    %rsp,%rbp
     tcsetattr(0, TCSANOW, &tios0);
-  4016f4:	ba 00 c4 fd 00       	mov    $0xfdc400,%edx
+  4016f4:	ba 60 c4 fd 00       	mov    $0xfdc460,%edx
   4016f9:	be 00 00 00 00       	mov    $0x0,%esi
   4016fe:	bf 00 00 00 00       	mov    $0x0,%edi
   401703:	e8 18 f8 ff ff       	callq  400f20 <tcsetattr@plt>
@@ -1210,15 +1210,15 @@ int C_KEY ()
   struct termios t1, t2;
 
   if (key_query_char)
-  401789:	0f b6 05 7c bc 20 00 	movzbl 0x20bc7c(%rip),%eax        # 60d40c <key_query_char>
+  401789:	0f b6 05 dc bc 20 00 	movzbl 0x20bcdc(%rip),%eax        # 60d46c <key_query_char>
   401790:	84 c0                	test   %al,%al
   401792:	74 16                	je     4017aa <C_KEY+0x2c>
     {
       ch = key_query_char;
-  401794:	0f b6 05 71 bc 20 00 	movzbl 0x20bc71(%rip),%eax        # 60d40c <key_query_char>
+  401794:	0f b6 05 d1 bc 20 00 	movzbl 0x20bcd1(%rip),%eax        # 60d46c <key_query_char>
   40179b:	88 45 fb             	mov    %al,-0x5(%rbp)
       key_query_char = 0;
-  40179e:	c6 05 67 bc 20 00 00 	movb   $0x0,0x20bc67(%rip)        # 60d40c <key_query_char>
+  40179e:	c6 05 c7 bc 20 00 00 	movb   $0x0,0x20bcc7(%rip)        # 60d46c <key_query_char>
   4017a5:	e9 d2 00 00 00       	jmpq   40187c <C_KEY+0xfe>
     }
   else
@@ -1310,7 +1310,7 @@ int C_KEYQUERY ()
   struct termios t1, t2;
 
   if (key_query_char)  return -1;
-  401894:	0f b6 05 71 bb 20 00 	movzbl 0x20bb71(%rip),%eax        # 60d40c <key_query_char>
+  401894:	0f b6 05 d1 bb 20 00 	movzbl 0x20bbd1(%rip),%eax        # 60d46c <key_query_char>
   40189b:	84 c0                	test   %al,%al
   40189d:	74 0a                	je     4018a9 <C_KEYQUERY+0x24>
   40189f:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
@@ -1374,7 +1374,7 @@ int C_KEYQUERY ()
   40196b:	84 c0                	test   %al,%al
   40196d:	74 0a                	je     401979 <C_KEYQUERY+0xf4>
   40196f:	0f b6 45 fb          	movzbl -0x5(%rbp),%eax
-  401973:	88 05 93 ba 20 00    	mov    %al,0x20ba93(%rip)        # 60d40c <key_query_char>
+  401973:	88 05 f3 ba 20 00    	mov    %al,0x20baf3(%rip)        # 60d46c <key_query_char>
       tcsetattr(0, TCSANOW, &t1);
   401979:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
   40197d:	48 89 c2             	mov    %rax,%rdx
@@ -1638,22 +1638,22 @@ int wherexy(void) {								/* 19 */
   401c38:	55                   	push   %rbp
   401c39:	48 89 e5             	mov    %rsp,%rbp
     lseek(ASCREEN, 0, SEEK_SET); read(ASCREEN, &scrn, 4);
-  401c3c:	8b 05 ce b7 20 00    	mov    0x20b7ce(%rip),%eax        # 60d410 <ASCREEN>
+  401c3c:	8b 05 2e b8 20 00    	mov    0x20b82e(%rip),%eax        # 60d470 <ASCREEN>
   401c42:	ba 00 00 00 00       	mov    $0x0,%edx
   401c47:	be 00 00 00 00       	mov    $0x0,%esi
   401c4c:	89 c7                	mov    %eax,%edi
   401c4e:	e8 dd f1 ff ff       	callq  400e30 <lseek@plt>
-  401c53:	8b 05 b7 b7 20 00    	mov    0x20b7b7(%rip),%eax        # 60d410 <ASCREEN>
+  401c53:	8b 05 17 b8 20 00    	mov    0x20b817(%rip),%eax        # 60d470 <ASCREEN>
   401c59:	ba 04 00 00 00       	mov    $0x4,%edx
-  401c5e:	be 14 d4 60 00       	mov    $0x60d414,%esi
+  401c5e:	be 74 d4 60 00       	mov    $0x60d474,%esi
   401c63:	89 c7                	mov    %eax,%edi
   401c65:	e8 16 f2 ff ff       	callq  400e80 <read@plt>
     return ((scrn.x << 16) | (scrn.y & 0xFFFF)); }
-  401c6a:	0f b6 05 a5 b7 20 00 	movzbl 0x20b7a5(%rip),%eax        # 60d416 <scrn+0x2>
+  401c6a:	0f b6 05 05 b8 20 00 	movzbl 0x20b805(%rip),%eax        # 60d476 <scrn+0x2>
   401c71:	0f be c0             	movsbl %al,%eax
   401c74:	89 c2                	mov    %eax,%edx
   401c76:	c1 e2 10             	shl    $0x10,%edx
-  401c79:	0f b6 05 97 b7 20 00 	movzbl 0x20b797(%rip),%eax        # 60d417 <scrn+0x3>
+  401c79:	0f b6 05 f7 b7 20 00 	movzbl 0x20b7f7(%rip),%eax        # 60d477 <scrn+0x3>
   401c80:	0f be c0             	movsbl %al,%eax
   401c83:	25 ff ff 00 00       	and    $0xffff,%eax
   401c88:	09 d0                	or     %edx,%eax
@@ -1683,10 +1683,10 @@ main(int argc,char **argv)
    ARGV1=argv[1];
   401cab:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
   401caf:	48 8b 40 08          	mov    0x8(%rax),%rax
-  401cb3:	48 89 05 f6 a6 bd 00 	mov    %rax,0xbda6f6(%rip)        # fdc3b0 <ARGV1>
+  401cb3:	48 89 05 56 a7 bd 00 	mov    %rax,0xbda756(%rip)        # fdc410 <ARGV1>
    FP=&FPBuf[FPBufSize-2];
-  401cba:	48 c7 05 7b 87 bd 00 	movq   $0xfdc3a0,0xbd877b(%rip)        # fda440 <FP>
-  401cc1:	a0 c3 fd 00 
+  401cba:	48 c7 05 db 87 bd 00 	movq   $0xfdc400,0xbd87db(%rip)        # fda4a0 <FP>
+  401cc1:	00 c4 fd 00 
   amain();
   401cc5:	b8 00 00 00 00       	mov    $0x0,%eax
   401cca:	e8 19 f4 ff ff       	callq  4010e8 <amain>
@@ -1808,7 +1808,7 @@ int c_sock_lconnect(int port)
   401dc5:	48 83 ec 10          	sub    $0x10,%rsp
   401dc9:	89 7d fc             	mov    %edi,-0x4(%rbp)
 	return c_sock_open( port, inet_addr_buf );
-  401dcc:	48 8b 15 0d b6 20 00 	mov    0x20b60d(%rip),%rdx        # 60d3e0 <inet_addr_buf>
+  401dcc:	48 8b 15 6d b6 20 00 	mov    0x20b66d(%rip),%rdx        # 60d440 <inet_addr_buf>
   401dd3:	8b 45 fc             	mov    -0x4(%rbp),%eax
   401dd6:	48 89 d6             	mov    %rdx,%rsi
   401dd9:	89 c7                	mov    %eax,%edi
@@ -2087,7 +2087,7 @@ int c_sock_accept (int sock)
     }
 	CIPAddr=client.sin_addr.s_addr;
   40204c:	8b 45 e4             	mov    -0x1c(%rbp),%eax
-  40204f:	89 05 e7 a3 bd 00    	mov    %eax,0xbda3e7(%rip)        # fdc43c <CIPAddr>
+  40204f:	89 05 47 a4 bd 00    	mov    %eax,0xbda447(%rip)        # fdc49c <CIPAddr>
 //	printf("From %x %s:%d\n", CIPAddr,inet_ntoa(client.sin_addr), ntohs(client.sin_port));
 	printf("From %x :%d\n", CIPAddr, ntohs(client.sin_port));
   402055:	0f b7 45 e2          	movzwl -0x1e(%rbp),%eax
@@ -2095,7 +2095,7 @@ int c_sock_accept (int sock)
   40205c:	89 c7                	mov    %eax,%edi
   40205e:	e8 8d ee ff ff       	callq  400ef0 <ntohs@plt>
   402063:	0f b7 d0             	movzwl %ax,%edx
-  402066:	8b 05 d0 a3 bd 00    	mov    0xbda3d0(%rip),%eax        # fdc43c <CIPAddr>
+  402066:	8b 05 30 a4 bd 00    	mov    0xbda430(%rip),%eax        # fdc49c <CIPAddr>
   40206c:	89 c6                	mov    %eax,%esi
   40206e:	bf 99 22 40 00       	mov    $0x402299,%edi
   402073:	b8 00 00 00 00       	mov    $0x0,%eax
