@@ -400,7 +400,7 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
  *(.igot.plt)
  .igot.plt      0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
 
-.data           0x0000000000603360     0xa0e8
+.data           0x0000000000603360     0xa148
  *(.data .data.* .gnu.linkonce.d.*)
  .data          0x0000000000603360        0x4 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
                 0x0000000000603360                data_start
@@ -409,7 +409,7 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
  *fill*         0x0000000000603364        0x4 00
  .data          0x0000000000603368        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
                 0x0000000000603368                __dso_handle
- .data          0x0000000000603370     0x9fb7 amain.o
+ .data          0x0000000000603370     0xa01c amain.o
                 0x000000000060337f                TT
                 0x0000000000603397                ZTYPE
                 0x00000000006033b5                HELLO
@@ -513,541 +513,542 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
                 0x0000000000603f46                NAMEgreat
                 0x0000000000603f5d                NAMEgreatF
                 0x0000000000603f73                FILL
-                0x0000000000603fcc                CMOVEgreat
-                0x0000000000604002                CMOVE
-                0x000000000060402d                ASCIIZgreat
-                0x000000000060405e                EXECUTE
-                0x0000000000604086                _SLITERALsubCODE
-                0x00000000006040bf                NOOP
-                0x00000000006040ce                I
-                0x00000000006040fa                ADDxESPycomTOS
-                0x0000000000604117                XDO
-                0x0000000000604141                QBRANCH
-                0x000000000060415d                XLIT
-                0x0000000000604184                ACCEPT1
-                0x00000000006041ad                WRITEsubFILE
-                0x00000000006041d6                READsubFILE
-                0x0000000000604217                REPOSITIONsubFILE
-                0x000000000060424b                ZOPENsubFILE
-                0x0000000000604278                CLOSEsubFILE
-                0x000000000060429a                FILEsubPOSITION
-                0x00000000006042d5                FILEsubSIZE
-                0x000000000060430b                HALT
-                0x0000000000604327                ALLOCATE
-                0x0000000000604358                FREE
-                0x0000000000604376                ZCD
-                0x0000000000604393                VECTsubCODE
-                0x00000000006043b4                ticDUP_V
-                0x00000000006043d6                ticDROP_V
-                0x00000000006043fb                ticcABORTdticcend
-                0x000000000060441b                ticTYPE
-                0x0000000000604449                _QTOUSERsubVALUEsubCODE
-                0x000000000060447d                _QUSERsubVALUEsubCODE
-                0x00000000006044ab                _QCONSTANTsubCODE
-                0x00000000006044cc                WsubCNT
-                0x00000000006044e6                greatOUT
-                0x0000000000604503                CONTEXT
-                0x0000000000604521                SsubO
-                0x000000000060453e                CURRENT
-                0x0000000000604558                BASE
-                0x0000000000604574                CURSTR
-                0x0000000000604593                SOURCEsubID
-                0x00000000006045b1                PAD
-                0x00000000006045cb                ATIB
-                0x00000000006045e4                TIB
-                0x0000000000604602                greatIN
-                0x000000000060461c                nTIB
-                0x0000000000604638                DOESgreatA
-                0x0000000000604652                ERsubU
-                0x000000000060466c                ERsubA
-                0x0000000000604689                HANDLER
-                0x00000000006046a6                CURFILE
-                0x00000000006046bf                BLK
-                0x00000000006046da                STATE
-                0x00000000006046f7                WARNING
-                0x000000000060470f                R_0
-                0x0000000000604727                S0
-                0x0000000000604749                TOVALUEsubCODE
-                0x000000000060476e                VALUEsubCODE
-                0x0000000000604796                QTOVALUEsubCODE
-                0x00000000006047bc                QVALUEsubCODE
-                0x00000000006047e4                CONSTANTsubCODE
-                0x0000000000604808                USERsubCODE
-                0x000000000060482e                CREATEsubCODE
-                0x0000000000604856                CLITERALsubCODE
-                0x000000000060487f                _CLITERALsubCODE
-                0x00000000006048ab                SLITERALsubCODE
-                0x00000000006048d8                _TOUSERsubVALUEsubCODE
-                0x0000000000604906                _TOVALUEsubCODE
-                0x0000000000604930                _QTOVALUEsubCODE
-                0x0000000000604955                _VECTsubCODE
-                0x0000000000604978                _USERsubVALUEsubCODE
-                0x000000000060499b                USERadd
-                0x00000000006049b5                _USERsubCODE
-                0x00000000006049e7                _CONSTANTsubCODE
-                0x0000000000604a0d                _VALUEsubCODE
-                0x0000000000604a34                _QVALUEsubCODE
-                0x0000000000604a5b                _CREATEsubCODE
-                0x0000000000604a7a                VOCsubLIST
-                0x0000000000604a97                BYE
-                0x0000000000604ab7                FORTHsubWORDLIST
-                0x0000000000604ad6                LAST
-                0x0000000000604af9                USERsubOFFS
-                0x0000000000604b1a                UPPER_V
-                0x0000000000604b3a                TCYDP0
-                0x0000000000604b5e                SOCK_OPEN
-                0x0000000000604b8a                GET_LOCALIP
-                0x0000000000604bae                CREATE_SERVER
-                0x0000000000604bcd                SOCK_ACCEPT
-                0x0000000000604bec                SOCK_LISTEN
-                0x0000000000604c07                GET_PID
-                0x0000000000604c26                GET_PPID
-                0x0000000000604c41                FORK
-                0x0000000000604c63                IMAGEBEGIN
-                0x0000000000604c80                DP
-                0x0000000000604c9d                NNN
-                0x0000000000605dac                LASTWORD
-                0x0000000000605dbc                Qcom
-                0x0000000000605dd7                CONSTANT
-                0x0000000000605e01                INCLUDED
-                0x0000000000605e16                DO
-                0x0000000000605e2d                LOOP
-                0x0000000000605e49                ALIGNsubNOP
-                0x0000000000605eba                HIDE
-                0x0000000000605ee6                SMUDGE
-                0x0000000000605f38                CsubSMUDGE
-                0x0000000000605f51                HLD
-                0x0000000000605f6e                SHEADER
-                0x0000000000605f8b                rskrsk
-                0x0000000000605fa0                lsklsk
-                0x0000000000605ff2                endMODULE
-                0x0000000000606010                EXPORT
-                0x000000000060602f                MODULEdcoma
-                0x00000000006060b4                INIT
-                0x0000000000606196                MM
-                0x00000000006061ba                COMMANDLINE
-                0x00000000006061ef                RRR
-                0x000000000060620f                ARG
-                0x000000000060622a                TTF
-                0x000000000060624c                THTST
-                0x000000000060626e                SPINIT
-                0x000000000060628f                EMIT
-                0x00000000006062ae                TYPE
-                0x00000000006062cc                ttt
-                0x00000000006062e2                TTT
-                0x000000000060630a                TSTVAR
-                0x0000000000606329                TITLE
-                0x000000000060640e                REFILL
-                0x00000000006064de                QUERY
-                0x0000000000606518                CONSOLEsubHANDLES
-                0x000000000060652b                lessPREgreat
-                0x000000000060654b                PSKIP
-                0x0000000000606598                PARSE
-                0x00000000006065e7                PARSEsubNAME
-                0x0000000000606602                NextWord
-                0x000000000060661f                PARSEsubWORD
-                0x0000000000606658                UPPER_NW
-                0x0000000000606689                UPPER
-                0x00000000006066ef                UPC
-                0x0000000000606732                UPPER_SCR
-                0x000000000060676c                ParseWord
-                0x00000000006067aa                SkipUpTo
-                0x00000000006067fa                SkipWord
-                0x0000000000606832                OnNotDelimiter
-                0x0000000000606867                SkipDelimiters
-                0x00000000006068b0                OnDelimiter
-                0x00000000006068d9                GetChar
-                0x000000000060691f                IsDelimiter
-                0x0000000000606944                PeekChar
-                0x0000000000606964                CharAddr
-                0x0000000000606995                EndOfChunk
-                0x00000000006069c8                SOURCEsave
-                0x00000000006069f5                SOURCE
-                0x0000000000606a15                CrslL
-                0x0000000000606a3e                ZZZZRR
-                0x0000000000606a5e                RECURSE
-                0x0000000000606aa4                AGAIN
-                0x0000000000606b39                REPEAT
-                0x0000000000606bd2                WHILE
-                0x0000000000606bf4                UNTIL
-                0x0000000000606cc4                BEGIN
-                0x0000000000606cf8                BREAK
-                0x0000000000606d14                THEN
-                0x0000000000606d30                ELSE
-                0x0000000000606d67                IF
-                0x0000000000606d9f                greatRESOLVE
-                0x0000000000606e0f                greatRESOLVE1
-                0x0000000000606e4d                greatORESOLVE
-                0x0000000000606ebe                greatORESOLVE1
-                0x0000000000606efd                lessMARK
-                0x0000000000606f15                greatMARK
-                0x0000000000606f43                queBRANCHcom
-                0x0000000000606fb3                CLITcom
-                0x0000000000606fe8                SLITcom
-                0x000000000060701a                ALIGNED
-                0x0000000000607094                ALIGNsubBYTES
-                0x00000000006070af                ALIGN
-                0x00000000006070e2                dticcom
-                0x00000000006070fd                Sdticcom
-                0x000000000060711c                Scom
-                0x000000000060714d                DLITcom
-                0x000000000060716e                LITcom
-                0x00000000006071ab                RETcom
-                0x00000000006071ce                BRANCHcom
-                0x000000000060721b                COMPILEcom
-                0x0000000000607237                _COMPILEcom
-                0x0000000000607279                HERE
-                0x000000000060729a                READsubLINE
-                0x000000000060747e                _dos
-                0x0000000000607499                _addr
-                0x00000000006074b3                _fp2
-                0x00000000006074cd                _fp1
-                0x00000000006074ed                UNIXsubLINES
-                0x000000000060752a                DOSsubLINES
-                0x0000000000607561                LTL
-                0x000000000060757d                LT
-                0x00000000006075a6                lpNumberOfBytesRead
-                0x00000000006075c7                CREATEsubFILE
-                0x00000000006075f2                OPENsubFILE
-                0x0000000000607623                ZslTOrsl
-                0x0000000000607691                DELETEsubFILE
-                0x00000000006076b6                SA
-                0x00000000006076e9                FILEsubBUFF
-                0x0000000000607703                KEYque
-                0x0000000000607723                KKEYque
-                0x000000000060773e                KEY
-                0x000000000060775d                KKEY
-                0x000000000060777b                SPACES
-                0x00000000006077b7                SPACE
-                0x00000000006077d1                BL
-                0x00000000006077f9                _EMIT
-                0x000000000060782b                EMITVAR
-                0x0000000000607847                CR
-                0x0000000000607865                _CR
-                0x000000000060788d                WXTYPE
-                0x00000000006078b6                WXZTYPEsubBUFF
-                0x00000000006079ce                TYPE1
-                0x00000000006079f1                ACCEPT
-                0x0000000000607a13                ACCEPT2
-                0x0000000000607a6b                ACCEPT2_
-                0x0000000000607b8a                DO1B
-                0x0000000000607e48                LAST_STP
-                0x0000000000607f62                ACC_END
-                0x00000000006080a0                ACC_HOME
-                0x0000000000608119                ACC_LEFT
-                0x0000000000608156                ACC_EMIT
-                0x0000000000608196                ACC_DELETE
-                0x0000000000608219                ACC_INSERT
-                0x0000000000608298                ATsubXYque
-                0x0000000000608300                READsubCDNUMBER
-                0x0000000000608377                ATsubXY
-                0x0000000000608404                ANSI_ESCAPE
-                0x0000000000608435                ACCEPT0
-                0x00000000006085ee                greatNUMBER
-                0x00000000006086a1                DIGIT
-                0x00000000006087c3                cdotdticcend
-                0x00000000006087df                DUMP
-                0x0000000000608920                PTYPE
-                0x000000000060896d                greatPRT
-                0x00000000006089a5                dot0
-                0x0000000000608a25                Hdot
-                0x0000000000608a58                Udot
-                0x0000000000608a73                UdotR
-                0x0000000000608a96                dotR
-                0x0000000000608abb                DdotR
-                0x0000000000608af2                dot
-                0x0000000000608b0c                Ddot
-                0x0000000000608b2d                cDdotcend
-                0x0000000000608b67                SIGN
-                0x0000000000608b95                ngreat
-                0x0000000000608bc8                nS
-                0x0000000000608bf1                n
-                0x0000000000608c7b                lessn
-                0x0000000000608cb9                HOLD
-                0x0000000000608cf1                DECIMAL
-                0x0000000000608d15                HEX
-                0x0000000000608d39                MHdot
-                0x0000000000609138                ABORT
-                0x0000000000609159                CATCH
-                0x00000000006091c6                lessSETsubEXCsubHANDLERgreat
-                0x00000000006091e6                THROW
-                0x0000000000609267                FATALsubHANDLER
-                0x0000000000609285                CFL
-                0x00000000006092a6                GETsubCURRENT
-                0x00000000006092c9                SETsubCURRENT
-                0x00000000006092e6                RDROP
-                0x000000000060932e                Wcom
-                0x000000000060935b                Ccom
-                0x000000000060938d                Lcom
-                0x00000000006093bd                ALLOT
-                0x00000000006093da                WORDS
-                0x00000000006093fc                NLIST
-                0x0000000000609509                queCRsubBREAK
-                0x0000000000609604                VOCsubNAMEdot
-                0x00000000006096a1                PREVIOUS
-                0x00000000006096d5                ALSO
-                0x0000000000609705                SETsubORDER
-                0x00000000006097d7                ORDER
-                0x000000000060986d                ONLY
-                0x0000000000609890                LATEST
-                0x00000000006098b2                FORTH
-                0x00000000006098d8                GETsubORDER
-                0x000000000060994d                DEFINITIONS
-                0x000000000060996f                FIND1
-                0x00000000006099b4                SFIND
-                0x0000000000609a64                SEARCHsubWORDLIST1
-                0x0000000000609b32                SEARCHsubWORDLIST
-                0x0000000000609b51                FIND
-                0x0000000000609b76                WordByAddr
-                0x0000000000609c06                NEAR_NFA
-                0x0000000000609c74                WL_NEAR_NFA_M
-                0x0000000000609d0b                WL_NEAR_NFA_N
-                0x0000000000609d58                WL_NEAR_NFA
-                0x0000000000609da5                N_UMAX
-                0x0000000000609e06                queVOC
-                0x0000000000609e32                queIMMEDIATE
-                0x0000000000609e5c                WORDLIST
-                0x0000000000609ed6                VOC
-                0x0000000000609f15                PARload
-                0x0000000000609f48                PARsave
-                0x0000000000609f7d                CLASSload
-                0x0000000000609fc0                CLASSsave
-                0x000000000060a006                IMMEDIATE
-                0x000000000060a046                addWORD
-                0x000000000060a08c                addSWORD
-                0x000000000060a0d1                greatBODY
-                0x000000000060a0f1                andVOC
-                0x000000000060a111                andIMMEDIATE
-                0x000000000060a12a                IDdot
-                0x000000000060a14b                queLITERAL2
-                0x000000000060a16d                queSLITERAL2
-                0x000000000060a2ea                HEXsubSLITERAL
-                0x000000000060a3d2                queLITERAL1
-                0x000000000060a3f4                queSLITERAL1
-                0x000000000060a511                subsub
-                0x000000000060a529                FIELD
-                0x000000000060a57c                slEOF
-                0x000000000060a5a7                EXIT
-                0x000000000060a5bb                end
-                0x000000000060a5ef                xCOMPILEy
-                0x000000000060a60d                c
-                0x000000000060a66a                dotc
-                0x000000000060a68c                sl
-                0x000000000060a6b5                POSTPONE
-                0x000000000060a72e                TO
-                0x000000000060a7f8                REQUIRE
-                0x000000000060a83a                REQUIRED
-                0x000000000060a881                INCLUDED_
-                0x000000000060a909                INCLUDEsubFILE
-                0x000000000060aa31                EVALUATE
-                0x000000000060aaeb                RESTOREsubSOURCE
-                0x000000000060ab45                SAVEsubSOURCE
-                0x000000000060ab84                FMAIN
-                0x000000000060abc9                MAIN1
-                0x000000000060abff                QUIT
-                0x000000000060ac2b                y
-                0x000000000060ac49                x
-                0x000000000060ac64                OK1
-                0x000000000060ad02                TYPE_BUFFadd
-                0x000000000060ad23                TYPE_BUFF
-                0x000000000060ada7                dotSN
-                0x000000000060ae94                INTERPRET
-                0x000000000060aebb                andINTERPRET
-                0x000000000060aedf                INTERPRET_
-                0x000000000060af69                CHAR
-                0x000000000060af87                tic
-                0x000000000060afc1                WORD
-                0x000000000060b057                queCOMP
-                0x000000000060b093                queSTACK
-                0x000000000060b0e7                DEPTH
-                0x000000000060b127                PROCESSsubERR
-                0x000000000060b14e                SOURCEsubIDsubXT
-                0x000000000060b172                queSLITERAL
-                0x000000000060b195                queLITERAL
-                0x000000000060b1b6                lessMAINgreat
-                0x000000000060b1d4                OKdot
-                0x000000000060b1f7                ERROR_DO
-                0x000000000060b3a2                ERRsubTYPE
-                0x000000000060b41a                cABORT1dticcend
-                0x000000000060b46a                queERROR
-                0x000000000060b4a0                _ERROR_DO
-                0x000000000060b580                SAVEERR
-                0x000000000060b5e6                ERRFILE
-                0x000000000060b7ff                ERRTIB
-                0x000000000060ba1a                cABORTdticcend
-                0x000000000060ba3a                ERROR
-                0x000000000060ba5a                ERgreatIN
-                0x000000000060ba7c                ERCURSTR
-                0x000000000060ba9e                greatIN_WORD
-                0x000000000060bac0                SAVEERRque
-                0x000000000060bae0                UNLOOP
-                0x000000000060bb14                LEAVE
-                0x000000000060bb56                addLOOP
-                0x000000000060bc18                _LOOP
-                0x000000000060bce5                queDO
-                0x000000000060beae                _DO
-                0x000000000060bf29                USER
-                0x000000000060bf55                USERsubCREATE
-                0x000000000060bf9c                USERsubALIGNED
-                0x000000000060bff1                USERsubHERE
-                0x000000000060c013                USERsubALLOT
-                0x000000000060c035                VOCABULARY
-                0x000000000060c0a2                dcoma
-                0x000000000060c0c9                subgreatVARIABLE
-                0x000000000060c0ef                VECT
-                0x000000000060c129                VALUE
-                0x000000000060c16b                VARIABLE
-                0x000000000060c1a1                cDOES1cend
-                0x000000000060c1e6                DOESgreat
-                0x000000000060c218                CREATE
-                0x000000000060c237                CREATED
-                0x000000000060c269                HEADER
-                0x000000000060c289                YSHEADER
-                0x000000000060c35d                queYDPgreatlessDP
-                0x000000000060c3aa                YDPgreatlessDP
-                0x000000000060c3e6                YDP_FL
-                0x000000000060c40d                YDP0
-                0x000000000060c42a                YDP
-                0x000000000060c44c                LASTsubNON
-                0x000000000060c46f                LASTsubCFA
-                0x000000000060c48b                ABORTdtic
-                0x000000000060c4b8                xCHARy
-                0x000000000060c4e1                dotdtic
-                0x000000000060c505                Cdtic
-                0x000000000060c528                Sdtic
-                0x000000000060c551                CLITERAL
-                0x000000000060c581                SLITERAL
-                0x000000000060c5d3                _2LITERAL
-                0x000000000060c602                LITERAL
-                0x000000000060c62d                xticy
-                0x000000000060c64d                RrslW
-                0x000000000060c668                WrslO
-                0x000000000060c683                RrslO
-                0x000000000060c6a3                NOTFOUND
-                0x000000000060c724                FLITERAL
-                0x000000000060c751                FLITcom
-                0x000000000060c774                Fcom
-                0x000000000060c79f                FLIT
-                0x000000000060c7d6                greatFLOAT
-                0x000000000060c839                ZFLOAT
-                0x000000000060c951                FCELL
-                0x000000000060c96b                Fless
-                0x000000000060c986                F0equ
-                0x000000000060c9a1                F0less
-                0x000000000060c9bb                Fdot
-                0x000000000060c9d8                CHARS
-                0x000000000060c9e7                com
-                0x000000000060ca0c                lessticgreat
-                0x000000000060ca53                RELload
-                0x000000000060ca76                SHORTque
-                0x000000000060caa7                ASCIIsubZ
-                0x000000000060caee                doladdsave
-                0x000000000060cb03                dolsave
-                0x000000000060cb27                TOUSERsubVALUEsubCODE
-                0x000000000060cb59                USERsubVALUEsubCODE
-                0x000000000060cb85                DOESsubCODE
-                0x000000000060cbaf                CaddPLACE
-                0x000000000060cbe1                addPLACE
-                0x000000000060cc44                PLACE
-                0x000000000060cc8a                dticCLIPdtic
-                0x000000000060ccba                MAXCOUNTED
-                0x000000000060ccd4                MOVE
-                0x000000000060cd4a                ON
-                0x000000000060cd6e                OFF
-                0x000000000060cd96                xSEARCH
-                0x000000000060ce35                xCOMPARE
-                0x000000000060cf0b                SEARCH
-                0x000000000060cfaa                COMPARE
-                0x000000000060d084                AASAVE0
-                0x000000000060d0a4                AASAVE
-                0x000000000060d0c3                BLANK
-                0x000000000060d0e0                ERASE
-                0x000000000060d100                _0MAX
-                0x000000000060d120                DABS
-                0x000000000060d14c                DBG1
-                0x000000000060d15d                DBG
-                0x000000000060d170                FALSE
-                0x000000000060d18a                TRUE
-                0x000000000060d1a4                CELL
-                0x000000000060d1c0                xTHENy
-                0x000000000060d1d2                xIFy
-                0x000000000060d1fb                xELSEy
-                0x000000000060d319                V_UPPER
- *fill*         0x000000000060d327        0x1 00
- .data          0x000000000060d328        0x0 main.o
- *fill*         0x000000000060d328       0x18 00
- .data          0x000000000060d340      0x108 clibs.o
-                0x000000000060d340                inet_addr_buff
-                0x000000000060d440                inet_addr_buf
- .data          0x000000000060d448        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
- .data          0x000000000060d448        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
- .data          0x000000000060d448        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
+                0x0000000000603fd6                CELLS_FILL
+                0x0000000000604003                CELLS_ERASE
+                0x0000000000604031                CMOVEgreat
+                0x0000000000604067                CMOVE
+                0x0000000000604092                ASCIIZgreat
+                0x00000000006040c3                EXECUTE
+                0x00000000006040eb                _SLITERALsubCODE
+                0x0000000000604124                NOOP
+                0x0000000000604133                I
+                0x000000000060415f                ADDxESPycomTOS
+                0x000000000060417c                XDO
+                0x00000000006041a6                QBRANCH
+                0x00000000006041c2                XLIT
+                0x00000000006041e9                ACCEPT1
+                0x0000000000604212                WRITEsubFILE
+                0x000000000060423b                READsubFILE
+                0x000000000060427c                REPOSITIONsubFILE
+                0x00000000006042b0                ZOPENsubFILE
+                0x00000000006042dd                CLOSEsubFILE
+                0x00000000006042ff                FILEsubPOSITION
+                0x000000000060433a                FILEsubSIZE
+                0x0000000000604370                HALT
+                0x000000000060438c                ALLOCATE
+                0x00000000006043bd                FREE
+                0x00000000006043db                ZCD
+                0x00000000006043f8                VECTsubCODE
+                0x0000000000604419                ticDUP_V
+                0x000000000060443b                ticDROP_V
+                0x0000000000604460                ticcABORTdticcend
+                0x0000000000604480                ticTYPE
+                0x00000000006044ae                _QTOUSERsubVALUEsubCODE
+                0x00000000006044e2                _QUSERsubVALUEsubCODE
+                0x0000000000604510                _QCONSTANTsubCODE
+                0x0000000000604531                WsubCNT
+                0x000000000060454b                greatOUT
+                0x0000000000604568                CONTEXT
+                0x0000000000604586                SsubO
+                0x00000000006045a3                CURRENT
+                0x00000000006045bd                BASE
+                0x00000000006045d9                CURSTR
+                0x00000000006045f8                SOURCEsubID
+                0x0000000000604616                PAD
+                0x0000000000604630                ATIB
+                0x0000000000604649                TIB
+                0x0000000000604667                greatIN
+                0x0000000000604681                nTIB
+                0x000000000060469d                DOESgreatA
+                0x00000000006046b7                ERsubU
+                0x00000000006046d1                ERsubA
+                0x00000000006046ee                HANDLER
+                0x000000000060470b                CURFILE
+                0x0000000000604724                BLK
+                0x000000000060473f                STATE
+                0x000000000060475c                WARNING
+                0x0000000000604774                R_0
+                0x000000000060478c                S0
+                0x00000000006047ae                TOVALUEsubCODE
+                0x00000000006047d3                VALUEsubCODE
+                0x00000000006047fb                QTOVALUEsubCODE
+                0x0000000000604821                QVALUEsubCODE
+                0x0000000000604849                CONSTANTsubCODE
+                0x000000000060486d                USERsubCODE
+                0x0000000000604893                CREATEsubCODE
+                0x00000000006048bb                CLITERALsubCODE
+                0x00000000006048e4                _CLITERALsubCODE
+                0x0000000000604910                SLITERALsubCODE
+                0x000000000060493d                _TOUSERsubVALUEsubCODE
+                0x000000000060496b                _TOVALUEsubCODE
+                0x0000000000604995                _QTOVALUEsubCODE
+                0x00000000006049ba                _VECTsubCODE
+                0x00000000006049dd                _USERsubVALUEsubCODE
+                0x0000000000604a00                USERadd
+                0x0000000000604a1a                _USERsubCODE
+                0x0000000000604a4c                _CONSTANTsubCODE
+                0x0000000000604a72                _VALUEsubCODE
+                0x0000000000604a99                _QVALUEsubCODE
+                0x0000000000604ac0                _CREATEsubCODE
+                0x0000000000604adf                VOCsubLIST
+                0x0000000000604afc                BYE
+                0x0000000000604b1c                FORTHsubWORDLIST
+                0x0000000000604b3b                LAST
+                0x0000000000604b5e                USERsubOFFS
+                0x0000000000604b7f                UPPER_V
+                0x0000000000604b9f                TCYDP0
+                0x0000000000604bc3                SOCK_OPEN
+                0x0000000000604bef                GET_LOCALIP
+                0x0000000000604c13                CREATE_SERVER
+                0x0000000000604c32                SOCK_ACCEPT
+                0x0000000000604c51                SOCK_LISTEN
+                0x0000000000604c6c                GET_PID
+                0x0000000000604c8b                GET_PPID
+                0x0000000000604ca6                FORK
+                0x0000000000604cc8                IMAGEBEGIN
+                0x0000000000604ce5                DP
+                0x0000000000604d02                NNN
+                0x0000000000605e11                LASTWORD
+                0x0000000000605e21                Qcom
+                0x0000000000605e3c                CONSTANT
+                0x0000000000605e66                INCLUDED
+                0x0000000000605e7b                DO
+                0x0000000000605e92                LOOP
+                0x0000000000605eae                ALIGNsubNOP
+                0x0000000000605f1f                HIDE
+                0x0000000000605f4b                SMUDGE
+                0x0000000000605f9d                CsubSMUDGE
+                0x0000000000605fb6                HLD
+                0x0000000000605fd3                SHEADER
+                0x0000000000605ff0                rskrsk
+                0x0000000000606005                lsklsk
+                0x0000000000606057                endMODULE
+                0x0000000000606075                EXPORT
+                0x0000000000606094                MODULEdcoma
+                0x0000000000606119                INIT
+                0x00000000006061fb                MM
+                0x000000000060621f                COMMANDLINE
+                0x0000000000606254                RRR
+                0x0000000000606274                ARG
+                0x000000000060628f                TTF
+                0x00000000006062b1                THTST
+                0x00000000006062d3                SPINIT
+                0x00000000006062f4                EMIT
+                0x0000000000606313                TYPE
+                0x0000000000606331                ttt
+                0x0000000000606347                TTT
+                0x000000000060636f                TSTVAR
+                0x000000000060638e                TITLE
+                0x0000000000606473                REFILL
+                0x0000000000606543                QUERY
+                0x000000000060657d                CONSOLEsubHANDLES
+                0x0000000000606590                lessPREgreat
+                0x00000000006065b0                PSKIP
+                0x00000000006065fd                PARSE
+                0x000000000060664c                PARSEsubNAME
+                0x0000000000606667                NextWord
+                0x0000000000606684                PARSEsubWORD
+                0x00000000006066bd                UPPER_NW
+                0x00000000006066ee                UPPER
+                0x0000000000606754                UPC
+                0x0000000000606797                UPPER_SCR
+                0x00000000006067d1                ParseWord
+                0x000000000060680f                SkipUpTo
+                0x000000000060685f                SkipWord
+                0x0000000000606897                OnNotDelimiter
+                0x00000000006068cc                SkipDelimiters
+                0x0000000000606915                OnDelimiter
+                0x000000000060693e                GetChar
+                0x0000000000606984                IsDelimiter
+                0x00000000006069a9                PeekChar
+                0x00000000006069c9                CharAddr
+                0x00000000006069fa                EndOfChunk
+                0x0000000000606a2d                SOURCEsave
+                0x0000000000606a5a                SOURCE
+                0x0000000000606a7a                CrslL
+                0x0000000000606aa3                ZZZZRR
+                0x0000000000606ac3                RECURSE
+                0x0000000000606b09                AGAIN
+                0x0000000000606b9e                REPEAT
+                0x0000000000606c37                WHILE
+                0x0000000000606c59                UNTIL
+                0x0000000000606d29                BEGIN
+                0x0000000000606d5d                BREAK
+                0x0000000000606d79                THEN
+                0x0000000000606d95                ELSE
+                0x0000000000606dcc                IF
+                0x0000000000606e04                greatRESOLVE
+                0x0000000000606e74                greatRESOLVE1
+                0x0000000000606eb2                greatORESOLVE
+                0x0000000000606f23                greatORESOLVE1
+                0x0000000000606f62                lessMARK
+                0x0000000000606f7a                greatMARK
+                0x0000000000606fa8                queBRANCHcom
+                0x0000000000607018                CLITcom
+                0x000000000060704d                SLITcom
+                0x000000000060707f                ALIGNED
+                0x00000000006070f9                ALIGNsubBYTES
+                0x0000000000607114                ALIGN
+                0x0000000000607147                dticcom
+                0x0000000000607162                Sdticcom
+                0x0000000000607181                Scom
+                0x00000000006071b2                DLITcom
+                0x00000000006071d3                LITcom
+                0x0000000000607210                RETcom
+                0x0000000000607233                BRANCHcom
+                0x0000000000607280                COMPILEcom
+                0x000000000060729c                _COMPILEcom
+                0x00000000006072de                HERE
+                0x00000000006072ff                READsubLINE
+                0x00000000006074e3                _dos
+                0x00000000006074fe                _addr
+                0x0000000000607518                _fp2
+                0x0000000000607532                _fp1
+                0x0000000000607552                UNIXsubLINES
+                0x000000000060758f                DOSsubLINES
+                0x00000000006075c6                LTL
+                0x00000000006075e2                LT
+                0x000000000060760b                lpNumberOfBytesRead
+                0x000000000060762c                CREATEsubFILE
+                0x0000000000607657                OPENsubFILE
+                0x0000000000607688                ZslTOrsl
+                0x00000000006076f6                DELETEsubFILE
+                0x000000000060771b                SA
+                0x000000000060774e                FILEsubBUFF
+                0x0000000000607768                KEYque
+                0x0000000000607788                KKEYque
+                0x00000000006077a3                KEY
+                0x00000000006077c2                KKEY
+                0x00000000006077e0                SPACES
+                0x000000000060781c                SPACE
+                0x0000000000607836                BL
+                0x000000000060785e                _EMIT
+                0x0000000000607890                EMITVAR
+                0x00000000006078ac                CR
+                0x00000000006078ca                _CR
+                0x00000000006078f2                WXTYPE
+                0x000000000060791b                WXZTYPEsubBUFF
+                0x0000000000607a33                TYPE1
+                0x0000000000607a56                ACCEPT
+                0x0000000000607a78                ACCEPT2
+                0x0000000000607ad0                ACCEPT2_
+                0x0000000000607bef                DO1B
+                0x0000000000607ead                LAST_STP
+                0x0000000000607fc7                ACC_END
+                0x0000000000608105                ACC_HOME
+                0x000000000060817e                ACC_LEFT
+                0x00000000006081bb                ACC_EMIT
+                0x00000000006081fb                ACC_DELETE
+                0x000000000060827e                ACC_INSERT
+                0x00000000006082fd                ATsubXYque
+                0x0000000000608365                READsubCDNUMBER
+                0x00000000006083dc                ATsubXY
+                0x0000000000608469                ANSI_ESCAPE
+                0x000000000060849a                ACCEPT0
+                0x0000000000608653                greatNUMBER
+                0x0000000000608706                DIGIT
+                0x0000000000608828                cdotdticcend
+                0x0000000000608844                DUMP
+                0x0000000000608985                PTYPE
+                0x00000000006089d2                greatPRT
+                0x0000000000608a0a                dot0
+                0x0000000000608a8a                Hdot
+                0x0000000000608abd                Udot
+                0x0000000000608ad8                UdotR
+                0x0000000000608afb                dotR
+                0x0000000000608b20                DdotR
+                0x0000000000608b57                dot
+                0x0000000000608b71                Ddot
+                0x0000000000608b92                cDdotcend
+                0x0000000000608bcc                SIGN
+                0x0000000000608bfa                ngreat
+                0x0000000000608c2d                nS
+                0x0000000000608c56                n
+                0x0000000000608ce0                lessn
+                0x0000000000608d1e                HOLD
+                0x0000000000608d56                DECIMAL
+                0x0000000000608d7a                HEX
+                0x0000000000608d9e                MHdot
+                0x000000000060919d                ABORT
+                0x00000000006091be                CATCH
+                0x000000000060922b                lessSETsubEXCsubHANDLERgreat
+                0x000000000060924b                THROW
+                0x00000000006092cc                FATALsubHANDLER
+                0x00000000006092ea                CFL
+                0x000000000060930b                GETsubCURRENT
+                0x000000000060932e                SETsubCURRENT
+                0x000000000060934b                RDROP
+                0x0000000000609393                Wcom
+                0x00000000006093c0                Ccom
+                0x00000000006093f2                Lcom
+                0x0000000000609422                ALLOT
+                0x000000000060943f                WORDS
+                0x0000000000609461                NLIST
+                0x000000000060956e                queCRsubBREAK
+                0x0000000000609669                VOCsubNAMEdot
+                0x0000000000609706                PREVIOUS
+                0x000000000060973a                ALSO
+                0x000000000060976a                SETsubORDER
+                0x000000000060983c                ORDER
+                0x00000000006098d2                ONLY
+                0x00000000006098f5                LATEST
+                0x0000000000609917                FORTH
+                0x000000000060993d                GETsubORDER
+                0x00000000006099b2                DEFINITIONS
+                0x00000000006099d4                FIND1
+                0x0000000000609a19                SFIND
+                0x0000000000609ac9                SEARCHsubWORDLIST1
+                0x0000000000609b97                SEARCHsubWORDLIST
+                0x0000000000609bb6                FIND
+                0x0000000000609bdb                WordByAddr
+                0x0000000000609c6b                NEAR_NFA
+                0x0000000000609cd9                WL_NEAR_NFA_M
+                0x0000000000609d70                WL_NEAR_NFA_N
+                0x0000000000609dbd                WL_NEAR_NFA
+                0x0000000000609e0a                N_UMAX
+                0x0000000000609e6b                queVOC
+                0x0000000000609e97                queIMMEDIATE
+                0x0000000000609ec1                WORDLIST
+                0x0000000000609f3b                VOC
+                0x0000000000609f7a                PARload
+                0x0000000000609fad                PARsave
+                0x0000000000609fe2                CLASSload
+                0x000000000060a025                CLASSsave
+                0x000000000060a06b                IMMEDIATE
+                0x000000000060a0ab                addWORD
+                0x000000000060a0f1                addSWORD
+                0x000000000060a136                greatBODY
+                0x000000000060a156                andVOC
+                0x000000000060a176                andIMMEDIATE
+                0x000000000060a18f                IDdot
+                0x000000000060a1b0                queLITERAL2
+                0x000000000060a1d2                queSLITERAL2
+                0x000000000060a34f                HEXsubSLITERAL
+                0x000000000060a437                queLITERAL1
+                0x000000000060a459                queSLITERAL1
+                0x000000000060a576                subsub
+                0x000000000060a58e                FIELD
+                0x000000000060a5e1                slEOF
+                0x000000000060a60c                EXIT
+                0x000000000060a620                end
+                0x000000000060a654                xCOMPILEy
+                0x000000000060a672                c
+                0x000000000060a6cf                dotc
+                0x000000000060a6f1                sl
+                0x000000000060a71a                POSTPONE
+                0x000000000060a793                TO
+                0x000000000060a85d                REQUIRE
+                0x000000000060a89f                REQUIRED
+                0x000000000060a8e6                INCLUDED_
+                0x000000000060a96e                INCLUDEsubFILE
+                0x000000000060aa96                EVALUATE
+                0x000000000060ab50                RESTOREsubSOURCE
+                0x000000000060abaa                SAVEsubSOURCE
+                0x000000000060abe9                FMAIN
+                0x000000000060ac2e                MAIN1
+                0x000000000060ac64                QUIT
+                0x000000000060ac90                y
+                0x000000000060acae                x
+                0x000000000060acc9                OK1
+                0x000000000060ad67                TYPE_BUFFadd
+                0x000000000060ad88                TYPE_BUFF
+                0x000000000060ae0c                dotSN
+                0x000000000060aef9                INTERPRET
+                0x000000000060af20                andINTERPRET
+                0x000000000060af44                INTERPRET_
+                0x000000000060afce                CHAR
+                0x000000000060afec                tic
+                0x000000000060b026                WORD
+                0x000000000060b0bc                queCOMP
+                0x000000000060b0f8                queSTACK
+                0x000000000060b14c                DEPTH
+                0x000000000060b18c                PROCESSsubERR
+                0x000000000060b1b3                SOURCEsubIDsubXT
+                0x000000000060b1d7                queSLITERAL
+                0x000000000060b1fa                queLITERAL
+                0x000000000060b21b                lessMAINgreat
+                0x000000000060b239                OKdot
+                0x000000000060b25c                ERROR_DO
+                0x000000000060b407                ERRsubTYPE
+                0x000000000060b47f                cABORT1dticcend
+                0x000000000060b4cf                queERROR
+                0x000000000060b505                _ERROR_DO
+                0x000000000060b5e5                SAVEERR
+                0x000000000060b64b                ERRFILE
+                0x000000000060b864                ERRTIB
+                0x000000000060ba7f                cABORTdticcend
+                0x000000000060ba9f                ERROR
+                0x000000000060babf                ERgreatIN
+                0x000000000060bae1                ERCURSTR
+                0x000000000060bb03                greatIN_WORD
+                0x000000000060bb25                SAVEERRque
+                0x000000000060bb45                UNLOOP
+                0x000000000060bb79                LEAVE
+                0x000000000060bbbb                addLOOP
+                0x000000000060bc7d                _LOOP
+                0x000000000060bd4a                queDO
+                0x000000000060bf13                _DO
+                0x000000000060bf8e                USER
+                0x000000000060bfba                USERsubCREATE
+                0x000000000060c001                USERsubALIGNED
+                0x000000000060c056                USERsubHERE
+                0x000000000060c078                USERsubALLOT
+                0x000000000060c09a                VOCABULARY
+                0x000000000060c107                dcoma
+                0x000000000060c12e                subgreatVARIABLE
+                0x000000000060c154                VECT
+                0x000000000060c18e                VALUE
+                0x000000000060c1d0                VARIABLE
+                0x000000000060c206                cDOES1cend
+                0x000000000060c24b                DOESgreat
+                0x000000000060c27d                CREATE
+                0x000000000060c29c                CREATED
+                0x000000000060c2ce                HEADER
+                0x000000000060c2ee                YSHEADER
+                0x000000000060c3c2                queYDPgreatlessDP
+                0x000000000060c40f                YDPgreatlessDP
+                0x000000000060c44b                YDP_FL
+                0x000000000060c472                YDP0
+                0x000000000060c48f                YDP
+                0x000000000060c4b1                LASTsubNON
+                0x000000000060c4d4                LASTsubCFA
+                0x000000000060c4f0                ABORTdtic
+                0x000000000060c51d                xCHARy
+                0x000000000060c546                dotdtic
+                0x000000000060c56a                Cdtic
+                0x000000000060c58d                Sdtic
+                0x000000000060c5b6                CLITERAL
+                0x000000000060c5e6                SLITERAL
+                0x000000000060c638                _2LITERAL
+                0x000000000060c667                LITERAL
+                0x000000000060c692                xticy
+                0x000000000060c6b2                RrslW
+                0x000000000060c6cd                WrslO
+                0x000000000060c6e8                RrslO
+                0x000000000060c708                NOTFOUND
+                0x000000000060c789                FLITERAL
+                0x000000000060c7b6                FLITcom
+                0x000000000060c7d9                Fcom
+                0x000000000060c804                FLIT
+                0x000000000060c83b                greatFLOAT
+                0x000000000060c89e                ZFLOAT
+                0x000000000060c9b6                FCELL
+                0x000000000060c9d0                Fless
+                0x000000000060c9eb                F0equ
+                0x000000000060ca06                F0less
+                0x000000000060ca20                Fdot
+                0x000000000060ca3d                CHARS
+                0x000000000060ca4c                com
+                0x000000000060ca71                lessticgreat
+                0x000000000060cab8                RELload
+                0x000000000060cadb                SHORTque
+                0x000000000060cb0c                ASCIIsubZ
+                0x000000000060cb53                doladdsave
+                0x000000000060cb68                dolsave
+                0x000000000060cb8c                TOUSERsubVALUEsubCODE
+                0x000000000060cbbe                USERsubVALUEsubCODE
+                0x000000000060cbea                DOESsubCODE
+                0x000000000060cc14                CaddPLACE
+                0x000000000060cc46                addPLACE
+                0x000000000060cca9                PLACE
+                0x000000000060ccef                dticCLIPdtic
+                0x000000000060cd1f                MAXCOUNTED
+                0x000000000060cd39                MOVE
+                0x000000000060cdaf                ON
+                0x000000000060cdd3                OFF
+                0x000000000060cdfb                xSEARCH
+                0x000000000060ce9a                xCOMPARE
+                0x000000000060cf70                SEARCH
+                0x000000000060d00f                COMPARE
+                0x000000000060d0e9                AASAVE0
+                0x000000000060d109                AASAVE
+                0x000000000060d128                BLANK
+                0x000000000060d145                ERASE
+                0x000000000060d165                _0MAX
+                0x000000000060d185                DABS
+                0x000000000060d1b1                DBG1
+                0x000000000060d1c2                DBG
+                0x000000000060d1d5                FALSE
+                0x000000000060d1ef                TRUE
+                0x000000000060d209                CELL
+                0x000000000060d225                xTHENy
+                0x000000000060d237                xIFy
+                0x000000000060d260                xELSEy
+                0x000000000060d37e                V_UPPER
+ .data          0x000000000060d38c        0x0 main.o
+ *fill*         0x000000000060d38c       0x14 00
+ .data          0x000000000060d3a0      0x108 clibs.o
+                0x000000000060d3a0                inet_addr_buff
+                0x000000000060d4a0                inet_addr_buf
+ .data          0x000000000060d4a8        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .data          0x000000000060d4a8        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
+ .data          0x000000000060d4a8        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
 
 .tm_clone_table
-                0x000000000060d448        0x0
+                0x000000000060d4a8        0x0
  .tm_clone_table
-                0x000000000060d448        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
+                0x000000000060d4a8        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
  .tm_clone_table
-                0x000000000060d448        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
+                0x000000000060d4a8        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
 
 .data1
  *(.data1)
-                0x000000000060d448                _edata = .
-                0x000000000060d448                PROVIDE (edata, .)
-                0x000000000060d448                __bss_start = .
+                0x000000000060d4a8                _edata = .
+                0x000000000060d4a8                PROVIDE (edata, .)
+                0x000000000060d4a8                __bss_start = .
 
-.bss            0x000000000060d460   0x9cf040
+.bss            0x000000000060d4c0   0x9cf040
  *(.dynbss)
- .dynbss        0x000000000060d460        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
-                0x000000000060d460                stdin@@GLIBC_2.2.5
+ .dynbss        0x000000000060d4c0        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+                0x000000000060d4c0                stdin@@GLIBC_2.2.5
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x000000000060d468        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
- .bss           0x000000000060d468        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crti.o
- .bss           0x000000000060d468        0x1 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
- *fill*         0x000000000060d469        0x3 00
- .bss           0x000000000060d46c        0x0 amain.o
- .bss           0x000000000060d46c        0xc main.o
-                0x000000000060d46c                key_query_char
- .bss           0x000000000060d478        0x0 clibs.o
- .bss           0x000000000060d478        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
- .bss           0x000000000060d478        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
- .bss           0x000000000060d478        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
+ .bss           0x000000000060d4c8        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+ .bss           0x000000000060d4c8        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crti.o
+ .bss           0x000000000060d4c8        0x1 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
+ *fill*         0x000000000060d4c9        0x3 00
+ .bss           0x000000000060d4cc        0x0 amain.o
+ .bss           0x000000000060d4cc        0xc main.o
+                0x000000000060d4cc                key_query_char
+ .bss           0x000000000060d4d8        0x0 clibs.o
+ .bss           0x000000000060d4d8        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .bss           0x000000000060d4d8        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
+ .bss           0x000000000060d4d8        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
  *(COMMON)
- *fill*         0x000000000060d478        0x8 00
- COMMON         0x000000000060d480   0x9cd010 amain.o
-                0x000000000060d480                HSPSAVE
-                0x000000000060d488                BYELEVEL
-                0x000000000060d490                _Stekc
-                0x0000000000612490                T_YDP0
-                0x0000000000616490                DP_BUFF
- *fill*         0x0000000000fda490       0x10 00
- COMMON         0x0000000000fda4a0     0x1ffc main.o
-                0x0000000000fda4a0                FP
-                0x0000000000fda4c0                FPBuf
-                0x0000000000fdc410                ARGV1
-                0x0000000000fdc418                ii
-                0x0000000000fdc420                buf
-                0x0000000000fdc460                tios0
- COMMON         0x0000000000fdc49c        0x4 clibs.o
-                0x0000000000fdc49c                CIPAddr
-                0x0000000000fdc4a0                . = ALIGN ((. != 0x0)?0x8:0x1)
+ *fill*         0x000000000060d4d8        0x8 00
+ COMMON         0x000000000060d4e0   0x9cd010 amain.o
+                0x000000000060d4e0                HSPSAVE
+                0x000000000060d4e8                BYELEVEL
+                0x000000000060d4f0                _Stekc
+                0x00000000006124f0                T_YDP0
+                0x00000000006164f0                DP_BUFF
+ *fill*         0x0000000000fda4f0       0x10 00
+ COMMON         0x0000000000fda500     0x1ffc main.o
+                0x0000000000fda500                FP
+                0x0000000000fda520                FPBuf
+                0x0000000000fdc470                ARGV1
+                0x0000000000fdc478                ii
+                0x0000000000fdc480                buf
+                0x0000000000fdc4c0                tios0
+ COMMON         0x0000000000fdc4fc        0x4 clibs.o
+                0x0000000000fdc4fc                CIPAddr
+                0x0000000000fdc500                . = ALIGN ((. != 0x0)?0x8:0x1)
 
 .lbss
  *(.dynlbss)
  *(.lbss .lbss.* .gnu.linkonce.lb.*)
  *(LARGE_COMMON)
-                0x0000000000fdc4a0                . = ALIGN (0x8)
+                0x0000000000fdc500                . = ALIGN (0x8)
 
 .lrodata
  *(.lrodata .lrodata.* .gnu.linkonce.lr.*)
 
-.ldata          0x00000000013dc4a0        0x0
+.ldata          0x00000000013dc500        0x0
  *(.ldata .ldata.* .gnu.linkonce.l.*)
-                0x00000000013dc4a0                . = ALIGN ((. != 0x0)?0x8:0x1)
-                0x00000000013dc4a0                . = ALIGN (0x8)
-                0x00000000013dc4a0                _end = .
-                0x00000000013dc4a0                PROVIDE (end, .)
-                0x00000000013dc4a0                . = DATA_SEGMENT_END (.)
+                0x00000000013dc500                . = ALIGN ((. != 0x0)?0x8:0x1)
+                0x00000000013dc500                . = ALIGN (0x8)
+                0x00000000013dc500                _end = .
+                0x00000000013dc500                PROVIDE (end, .)
+                0x00000000013dc500                . = DATA_SEGMENT_END (.)
 
 .stab
  *(.stab)
@@ -1113,11 +1114,11 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
  .debug_abbrev  0x0000000000000012      0x318 main.o
  .debug_abbrev  0x000000000000032a      0x1d0 clibs.o
 
-.debug_line     0x0000000000000000     0x16ec
+.debug_line     0x0000000000000000     0x16ff
  *(.debug_line)
- .debug_line    0x0000000000000000     0x12d7 amain.o
- .debug_line    0x00000000000012d7      0x285 main.o
- .debug_line    0x000000000000155c      0x190 clibs.o
+ .debug_line    0x0000000000000000     0x12ea amain.o
+ .debug_line    0x00000000000012ea      0x285 main.o
+ .debug_line    0x000000000000156f      0x190 clibs.o
 
 .debug_frame
  *(.debug_frame)

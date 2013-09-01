@@ -41,9 +41,9 @@ VARIABLE AASAVE0
      SWAP C@ SWAP C@ -
   \       ." Z=" DUP .
        2RDROP
-\ R> R> 2DROP 
+\ R> R> 2DROP
         EXIT
-    THEN 
+    THEN
     1+ SWAP 1+ SWAP
     R> 1- DUP >R   0=
    UNTIL R>
@@ -80,9 +80,9 @@ VARIABLE AASAVE0
      SWAP C@ SWAP C@ -
   \       ." Z=" DUP .
        2RDROP
-\ R> R> 2DROP 
+\ R> R> 2DROP
         EXIT
-    THEN 
+    THEN
     1+ SWAP 1+ SWAP
     R> 1- DUP >R   0=
    UNTIL R>
@@ -96,7 +96,7 @@ VARIABLE AASAVE0
     2>R 2DUP
     BEGIN
 \      DUP 1+ R@ DUP . 2DUP . .  > DUP .
-      DUP 1+ R@ > 
+      DUP 1+ R@ >
     WHILE
       OVER 2R@ TUCK xCOMPARE 0=
       IF 2RDROP 2SWAP 2DROP TRUE EXIT THEN
@@ -198,9 +198,9 @@ R>  1+ DUP 4 + >R  REL@ 4 + ;
 
 : 2CONSTANT  ( d --- )
 \ Create a new definition that has the following runtime behavior.
-\ Runtime: ( --- d) push the constant double number on the stack. 
+\ Runtime: ( --- d) push the constant double number on the stack.
   CREATE HERE 2! 8 ALLOT DOES> 2@ ;
 
 
- 
- 
+
+
