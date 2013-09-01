@@ -138,14 +138,14 @@ fdef("HELLO",5,0,HELLO)
 .LC5:  .string "Hello!!!"
 
 fdef("DUP",3 ,0 ,DUP)
-		lea    -4*2(%rbp),%rbp
+		lea    -8(%rbp),%rbp
 		mov		%rax,(%rbp)
 		ret
 
 fdef("OVER",4,0 ,OVER)
-		lea		-4*2(%rbp),%rbp
+		lea		-8(%rbp),%rbp
 		mov		%rax,(%rbp)
-		mov		4*2(%rbp),%rax
+		mov		8(%rbp),%rax
 		retq
 
 fdef("SWAP",4,0 ,SWAP)
@@ -157,13 +157,13 @@ fdef("SWAP",4,0 ,SWAP)
 fdef("ROT",3,0 ,ROT)
 		mov		(%rbp),%rdx
 		mov		%rax,(%rbp)
-		mov		4*2(%rbp),%rax
-		mov		%rdx,4*2(%rbp)
+		mov		8(%rbp),%rax
+		mov		%rdx,8(%rbp)
 		retq
 
 fdef("-ROT",4,0 ,subROT)
-		mov		4*2(%rbp),%rdx
-		mov		%rax,4*2(%rbp)
+		mov		8(%rbp),%rdx
+		mov		%rax,8(%rbp)
 		mov		(%rbp),%rax
 		mov		%rdx,(%rbp)
 		retq
@@ -172,7 +172,7 @@ fdef("-ROT",4,0 ,subROT)
 fdef("DROP",4,0 ,DROP)
 DgreatS:
 		mov		(%rbp),%rax
-NIP:	lea		4*2(%rbp), %rbp
+NIP:	lea		8(%rbp), %rbp
 		ret
 
 fordef("D>S",3,0 ,DROP)
@@ -180,34 +180,34 @@ fordef("NIP",3,0 ,NIP)
 
 fdef("2DUP",4,0 ,_2DUP)
 		mov		(%rbp),%rdx
-		mov		%rax,-4*2(%rbp)
+		mov		%rax,-8(%rbp)
 		mov		%rdx,-8*2(%rbp)
 		lea    -8*2(%rbp), %rbp
 		ret
 
 fdef("2DROP",5,0 ,_2DROP)
-		mov		4*2(%rbp),%rax
+		mov		8(%rbp),%rax
 		lea		8*2(%rbp),%rbp
 		retq
 
 fdef("2SWAP",5,0 ,_2SWAP)
 		mov 0(%rbp),%rcx
-		mov 0x4*2(%rbp),%rdx
+		mov 0x8(%rbp),%rdx
 		mov 0x8*2(%rbp),%rbx
 		mov %rcx,0x8*2(%rbp)
-		mov %rax,0x4*2(%rbp)
+		mov %rax,0x8(%rbp)
 		mov %rbx,0(%rbp)
 		mov %rdx,%rax
 		retq
 
 fdef("PICK",4,0 ,PICK)
-		mov (%rbp,%rax,4*2),%rax
+		mov (%rbp,%rax,8),%rax
 		retq
 
 fdef("TUCK",4,0 ,TUCK)
-		lea -4*2(%rbp),%rbp
-		mov 4*2(%rbp),%rdx
-		mov %rax,4*2(%rbp)
+		lea -8(%rbp),%rbp
+		mov 8(%rbp),%rdx
+		mov %rax,8(%rbp)
 		mov %rdx,(%rbp)
 		retq
 
@@ -262,7 +262,7 @@ fdef("L!",2,0,Lsave)
 /* x a-addr --  */
 		mov    (%rbp),%edx
 		movl	%edx,(%rax)
-		mov    4*2(%rbp),%rax
+		mov    8(%rbp),%rax
 		lea    8*2(%rbp),%rbp
 		ret
 
@@ -270,7 +270,7 @@ fdef("!",1,0,save)
 /* x a-addr --  */
 		mov    (%rbp),%rdx
 		mov 	%rdx,(%rax)
-		mov    4*2(%rbp),%rax
+		mov    8(%rbp),%rax
 		lea    8*2(%rbp),%rbp
 		ret
 
@@ -278,7 +278,7 @@ fdef("+!",2,0,addsave)
 /* x a-addr --  */
 		mov    (%rbp),%edx
 		addl	%edx,(%rax)
-		mov    4*2(%rbp),%rax
+		mov    8(%rbp),%rax
 		lea    8*2(%rbp),%rbp
 		ret
 
@@ -286,7 +286,7 @@ fdef("C!",2,0,Csave)
 /* c a-addr --  */
 		movb    (%rbp),%dl
 		movb 	%dl,(%rax)
-		mov    4*2(%rbp),%rax
+		mov    8(%rbp),%rax
 		lea    8*2(%rbp),%rbp
 		ret
 
@@ -294,7 +294,7 @@ fdef("W!",2,0,Wsave)
 /* w a-addr --  */
 		mov		(%rbp),%edx
 		mov		%dx,(%rax)
-		mov		4*2(%rbp),%rax
+		mov		8(%rbp),%rax
 		lea		8*2(%rbp),%rbp
 		retq
 
@@ -302,26 +302,26 @@ fdef("0!",2,0,_0save)
 /*  a-addr --  */
 		movq	$0,(%rax)
 		mov     (%rbp),%rax
-		lea    4*2(%rbp),%rbp
+		lea    8(%rbp),%rbp
 		ret
 
 fdef("1+!",3,0,_1addsave)
 /*  a-addr --  */
 		incq	(%rax)
 		mov     (%rbp),%rax
-		lea    4*2(%rbp),%rbp
+		lea    8(%rbp),%rbp
 		ret
 
 fdef("=",1,0,equ)
 		xor		(%rbp),%rax
-		lea    4*2(%rbp), %rbp
+		lea    8(%rbp), %rbp
 		sub		$1,%rax
 		sbb		%rax,%rax
 		ret
 
 fdef("D0=",3,0,D0equ)
 		or		(%rbp),%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 _0equ:	sub		$1,%rax
 		sbb		%rax,%rax
 		retq
@@ -330,7 +330,7 @@ fordef("0=",2,0,_0equ)
 fdef("UMIN",4,0,UMIN)
 		cmp		(%rbp),%rax
 		ja		DROP
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		retq
 fdef("UMAX",4,0,UMAX)
 		cmp		(%rbp),%rax
@@ -340,12 +340,12 @@ fdef("UMAX",4,0,UMAX)
 fdef("MIN",3,0,MIN)
 		cmp		(%rbp),%rax
 		jg		DROP
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		retq
 fdef("MAX",3,0,MAX)
 		cmp		(%rbp),%rax
 		jl		DROP
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		retq
 
 fdef("ABS",3,0,ABS)
@@ -380,13 +380,13 @@ fdef("2+",2,0,_2add)
 		retq
 
 fdef("CELLS",5,0,CELLS)
-		lea		(,%rax,4*2),%rax
+		lea		(,%rax,8),%rax
 		retq
 fdef("CELL-",5,0,CELLsub)
-		lea		-4*2(%rax),%rax
+		lea		-8(%rax),%rax
 		retq
 fdef("CELL+",5,0,CELLadd)
-		lea		4*2(%rax),%rax
+		lea		8(%rax),%rax
 		retq
 
 fdef("QCELL+",6,0,QCELLadd)
@@ -394,21 +394,21 @@ fdef("QCELL+",6,0,QCELLadd)
 		retq
 
 fdef("COUNT",5,0,COUNT)
-		lea    -4*2(%rbp), %rbp
+		lea    -8(%rbp), %rbp
 		lea    1(%rax), %rdx
 		movzbq  (%rax),%rax
 		mov     %rdx, (%rbp)
 		ret
 
 fdef("U>D",3,0,UgreatD)
-		lea		-4*2(%rbp),%rbp
+		lea		-8(%rbp),%rbp
 		mov		%rax,(%rbp)
 		xor		%rax,%rax
 		retq
 
 fdef("S>D",3,0,SgreatD)
 		cqto
-		lea		-4*2(%rbp),%rbp
+		lea		-8(%rbp),%rbp
 		mov		%rax,(%rbp)
 		mov		%rdx,%rax
 		retq
@@ -421,9 +421,9 @@ fdef("H-STDOUT",8,0,HsubSTDOUT)
 fdef("UM/MOD",6,0,UMrslMOD)
 		mov		%rax,%rcx
 		mov		(%rbp),%rdx
-		mov		4*2(%rbp),%rax
+		mov		8(%rbp),%rax
 		div		%rcx
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		mov		%rdx,(%rbp)
 		retq
 
@@ -431,7 +431,7 @@ fdef("U/",2,0,Ursl)
 		mov %rax,%rcx
 		mov 0(%rbp),%rax
 		xor %rdx,%rdx
-		lea 4*2(%rbp),%rbp
+		lea 8(%rbp),%rbp
 		div %rcx
 		retq
 
@@ -443,7 +443,7 @@ fdef("UM*",3,0,UMmul)
 
 fdef("*",1,0,mul)
 		imull	(%rbp)
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		retq
 
 fdef("/",1,0,rsl)
@@ -451,7 +451,7 @@ fdef("/",1,0,rsl)
 		mov (%rbp),%rax
 		cqto
 		idiv %rcx
-		lea 4*2(%rbp),%rbp
+		lea 8(%rbp),%rbp
 		ret
 
 fdef("2/",2,0,one_rshift)
@@ -475,7 +475,7 @@ fdef("MOD",3,0,MOD)
 		mov		(%rbp),%rax
 		cqto
 		idiv	%rcx
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		mov		%rdx,%rax
 		retq
 
@@ -491,21 +491,21 @@ fdef("LSHIFT",6,0,LSHIFT)
 		mov		%al,%cl
 		mov		(%rbp),%rax
 		shl		%cl,%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		ret
 
 fdef("RSHIFT",6,0,RSHIFT)
 		mov		%al,%cl
 		mov		(%rbp),%rax
 		shr		%cl,%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		ret
 
 fdef("ARSHIFT",7,0,ARSHIFT)
 		mov		%al,%cl
 		mov		(%rbp),%rax
 		sar		%cl,%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		ret
 
 fdef("?DUP",4,0,queDUP)
@@ -518,21 +518,21 @@ fdef(">",1,0,great)
 		setge	%al
 		and		$1,%rax
 		dec		%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		ret
 fdef("<",1,0,less)
 		cmp		(%rbp),%rax
 		setle	%al
 		and		$1,%rax
 		dec		%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		ret
 
 fdef("<>",2,0,lessgreat)
 		xor		(%rbp),%rax
 		neg		%rax
 		sbb		%rax,%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		ret
 
 fdef("0<>",3,0,_0lessgreat)
@@ -549,17 +549,17 @@ fordef("0<",2,0,_0less)
 fdef("U>",2,0,Ugreat)
 		cmp		(%rbp),%rax
 		sbb		%rax,%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		retq
 
 fdef("U<",2,0,Uless)
 		cmp		%rax,(%rbp)
 		sbb		%rax,%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		retq
 
 fdef("WITHIN",6,0,WITHIN)
-	mov		4*2(%rbp),%rdx
+	mov		8(%rbp),%rdx
 	sub		(%rbp),%rax
 	sub		(%rbp),%rdx
 	sub		%rax,%rdx
@@ -569,19 +569,19 @@ fdef("WITHIN",6,0,WITHIN)
 
 fdef("OR",2,0,OR)
 		or		(%rbp),%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		ret
 
 fdef("AND",3,0,AND)
 		and		(%rbp),%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		ret
 
 fdef("-",1,0,sub)
 //sub:
 		neg		%rax
 add:	add		(%rbp),%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		ret
 fordef("+",1,0,add)
 
@@ -596,7 +596,7 @@ fdef("DNEGATE",7,0,DNEGATE)
 fdef("D+",2,0,Dadd)
 		mov (%rbp),%rdx
 		add %rdx,0x8*2(%rbp)
-		adc 0x4*2(%rbp),%rax
+		adc 0x8(%rbp),%rax
 		lea 0x8*2(%rbp),%rbp
 		retq
 
@@ -637,7 +637,7 @@ fdef("F@",2,0,Fload)
 
 fdef("F>D",3,0,FgreatD)
 		lea		-8*2(%rbp),%rbp
-		mov		%eax,4*2(%rbp)
+		mov		%eax,8(%rbp)
 		call	f_to_d
 		mov		%rax,(%rbp)
 		shr		$32,%rax
@@ -654,14 +654,14 @@ fdef("D>F",3,0,DgreatF)
 
 
 fdef("R@",2,0,Rload)
-		lea		-4*2(%rbp),%rbp
+		lea		-8(%rbp),%rbp
 		mov		%rax,(%rbp)
 		mov		8(%rsp),%rax
 		retq
 
 fdef("R>",2,0,Rgreat)
 		mov		(%rsp),%rbx
-		lea    -4*2(%rbp), %rbp
+		lea    -8(%rbp), %rbp
 		mov		%rax,(%rbp)
 		mov		8(%rsp),%rax
 		lea		0x10(%rsp),%rsp
@@ -671,12 +671,12 @@ fdef(">R",2,0,greatR)
 		pop		%rbx
 		push	%rax
 		mov		(%rbp),%rax
-		lea		4*2(%rbp), %rbp
+		lea		8(%rbp), %rbp
 		jmpq	*%rbx
 
 fdef("2R>",3,0,_2Rgreat)
 		mov		(%rsp),%rbx
-		mov		%rax,-4*2(%rbp)
+		mov		%rax,-8(%rbp)
 		mov		0x10(%rsp),%rcx
 		mov		8(%rsp),%rax
 		mov		%rcx,-8*2(%rbp)
@@ -689,11 +689,11 @@ fdef("2>R",3,0,_2greatR)
 		pushq	(%rbp)
 		push	%rax
 		lea		8*2(%rbp),%rbp
-		mov		-4*2(%rbp),%rax
+		mov		-8(%rbp),%rax
 		jmpq *%rbx
 
 fdef("2R@",3,0,_2Rload)
-		mov		%rax,-4*2(%rbp)
+		mov		%rax,-8(%rbp)
 		mov		8(%rsp),%rax
 		mov		0x10(%rsp),%rbx
 		mov		%rbx,-8*2(%rbp)
@@ -701,18 +701,18 @@ fdef("2R@",3,0,_2Rload)
 		retq
 
 fdef("SP@",3,0,SPload)
-		lea		-4*2(%rbp),%rbp
+		lea		-8(%rbp),%rbp
 		mov		%rax,(%rbp)
 		mov		%rbp,%rax
 		retq
 
 fdef("SP!",3,0,SPsave)
-		lea		4*2(%rax),%rbp
-		mov		-4*2(%rbp),%rax
+		lea		8(%rax),%rbp
+		mov		-8(%rbp),%rax
 		retq
 
 fdef("RP@",3 ,0 ,RPload)
-		lea    -4*2(%rbp), %rbp
+		lea    -8(%rbp), %rbp
 		mov		%rax,(%rbp)
 		lea    8(%rsp), %rax
 		ret
@@ -722,7 +722,7 @@ fdef("RP!",3,0,RPsave)
 		or HSPSAVE,%rax
 		mov %rax,%rsp
 		mov (%rbp),%rax
-		lea 4*2(%rbp),%rbp
+		lea 8(%rbp),%rbp
 		jmpq *%rbx
 
 fdef("UP@",3,0,UPGet)
@@ -751,12 +751,11 @@ fdef("NAME>F",6,0,NAMEgreatF)
 
 fdef("FILL",4,0,FILL)
         mov     (%rbp),%rcx
-        mov     4*2(%rbp),%rdi
+        mov     8(%rbp),%rdi
         cld
         mov     %rcx,%rbx
         and     $7,%rbx
-        jne     FILL_R
-        mov     %rax,%rbx
+        jne     FILL1
         mov     %rax,%rbx
         shl     $8,%rax
         or      %rbx,%rax
@@ -771,15 +770,34 @@ fdef("FILL",4,0,FILL)
         rep     stos %rax,%es:(%rdi)
         mov     %rbx,%rcx
         and     $0x7,%rcx
-FILL_R: rep     stos %al,%es:(%rdi)
-        lea     0xc*2(%rbp),%rbp
-        mov     -4*2(%rbp),%rax
+FILL1:  rep     stos %al,%es:(%rdi)
+        lea     24(%rbp),%rbp
+        mov     -8(%rbp),%rax
+        retq
+
+fdef("CELLS-FILL",10,0,CELLS_FILL)   // ( addr cells num -- )
+        mov     (%rbp),%rcx
+        mov     8(%rbp),%rdi
+        cld
+        rep     stos %rax,%es:(%rdi)
+        lea     24(%rbp),%rbp
+        mov     -8(%rbp),%rax
+        retq
+
+fdef("CELLS-ERASE",11,0,CELLS_ERASE)   // ( addr cells -- )
+        mov     %rax,%rcx
+        mov     $0,%rax
+        mov     (%rbp),%rdi
+        cld
+        rep     stos %rax,%es:(%rdi)
+        lea     16(%rbp),%rbp
+        mov     -8(%rbp),%rax
         retq
 
 fdef("CMOVE>",6,0,CMOVEgreat)
 		mov		%rax,%rcx
 		mov		(%rbp),%rdi
-		mov		4*2(%rbp),%rsi
+		mov		8(%rbp),%rsi
 		std
 		add		%rcx,%rdi
 		add		%rcx,%rsi
@@ -787,22 +805,22 @@ fdef("CMOVE>",6,0,CMOVEgreat)
 		dec		%rdi
 		rep movsb %ds:(%rsi),%es:(%rdi)
 		cld
-		lea		0xc*2(%rbp),%rbp
-		mov		-4*2(%rbp),%rax
+		lea		24(%rbp),%rbp
+		mov		-8(%rbp),%rax
 		retq
 
 fdef("CMOVE",5,0,CMOVE)
 		mov		%rax,%rcx
 		mov		(%rbp),%rdi
-		mov		4*2(%rbp),%rsi
+		mov		8(%rbp),%rsi
 		cld
 		rep movsb %ds:(%rsi),%es:(%rdi)
-		lea		0xc*2(%rbp),%rbp
-		mov		-4*2(%rbp),%rax
+		lea		24(%rbp),%rbp
+		mov		-8(%rbp),%rax
 		retq
 
 fdef("ASCIIZ>",7,0,ASCIIZgreat)
-		lea		-4*2(%rbp),%rbp
+		lea		-8(%rbp),%rbp
 		mov		%rax,%rdx
 ASCg:	mov		(%rax),%cl
 		lea		1(%rax),%rax
@@ -816,12 +834,12 @@ ASCg:	mov		(%rax),%cl
 fdef("EXECUTE",7,0,EXECUTE)
 		mov		%rax,%rdx
 		mov		(%rbp),%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		jmpq	*%rdx
 
 fdef("_SLITERAL-CODE",14 ,0 ,_SLITERALsubCODE)
         lea    -8*2(%rbp), %rbp
-   		mov     %rax, 4*2(%rbp)
+   		mov     %rax, 8(%rbp)
 		pop		%rbx
 		movzbl  (%rbx),%eax
 		inc		%rbx
@@ -841,7 +859,7 @@ fdef("NOOP",0x4 ,0 ,NOOP)
 
 
 fdef("I",1 ,0 ,I)
-		lea -4*2(%rbp),%rbp
+		lea -8(%rbp),%rbp
 		mov %rax,(%rbp)
 		mov 8(%rsp),%rax
 		sub 16(%rsp),%rax
@@ -850,14 +868,14 @@ fdef("I",1 ,0 ,I)
 fdef("ADD[ESP],TOS",12 ,0 ,ADDxESPycomTOS)
 		add %eax,8(%rsp)
 		mov	(%rbp),%rax
-		lea	4*2(%rbp),%rbp
+		lea	8(%rbp),%rbp
 		ret
 
 fdef("XDO",3 ,0 ,XDO)
 	mov		$0x80000000,%edx
 	sub		(%rbp),%edx
 	lea		(%rdx,%rax,1),%ebx
-	mov		4*2(%rbp),%rax
+	mov		8(%rbp),%rax
 	mov		%edx,%edx
 	lea		8*2(%rbp),%rbp
 	ret
@@ -866,11 +884,11 @@ fdef("XDO",3 ,0 ,XDO)
 fdef("QBRANCH",7 ,0 , QBRANCH)
 		or %eax,%eax
 		mov	(%rbp),%rax
-		lea	4*2(%rbp),%rbp
+		lea	8(%rbp),%rbp
 		ret
 
 fdef("XLIT",4 ,0 , XLIT)
-		lea	-4*2(%rbp),%rbp
+		lea	-8(%rbp),%rbp
 	mov		%rax,(%rbp)
 	pop		%rdx
 	mov		(%rdx),%eax
@@ -883,11 +901,11 @@ fdef("ACCEPT1",7,0 ,ACCEPT1)
 		mov    %eax,%edx
 		xor    %edi,%edi
 		call	read
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		retq
 
 fdef("WRITE-FILE",0xA ,0 ,WRITEsubFILE)
-        mov    4*2(%rbp), %rsi
+        mov    8(%rbp), %rsi
         mov    (%rbp), %edx
 		mov    %eax, %edi
         call    write
@@ -895,30 +913,30 @@ fdef("WRITE-FILE",0xA ,0 ,WRITEsubFILE)
 		ret
 
 fdef("READ-FILE",9,0 ,READsubFILE)
-		mov    4*2(%rbp),%rsi
+		mov    8(%rbp),%rsi
 		mov    (%rbp),%edx
 		mov    %eax,%edi
 		call	read
 
 		mov    (%rbp),%edx
-		mov		%rax,4*2(%rbp)
+		mov		%rax,8(%rbp)
 
 		cmp		(%rbp),%eax
 		setle	%al
 		and		$1,%eax
 		dec		%eax
 
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		retq
 
 fdef("REPOSITION-FILE",15,0 ,REPOSITIONsubFILE)
-		mov		4*2(%rbp),%rsi
-//		mov		4*2(%rbp),%edx
+		mov		8(%rbp),%rsi
+//		mov		8(%rbp),%edx
 		mov		%eax,%edi
 
 		call	rmlseek
 
-		mov		%eax,4*2(%rbp)
+		mov		%eax,8(%rbp)
 
 		cmp		%esi,%eax
 		setle	%al
@@ -950,11 +968,11 @@ fdef("FILE-POSITION",13,0 ,FILEsubPOSITION)
 		call	mtell
 		cmp		$-1,%eax
 		je		FILEP
-		mov		%eax,4*2(%rbp)
+		mov		%eax,8(%rbp)
 		movl	$0,(%rbp)
 		xor		%eax,%eax
 		ret
-FILEP:	mov		%eax,4*2(%rbp)
+FILEP:	mov		%eax,8(%rbp)
 		mov		%rax,(%rbp)
 		ret
 
@@ -964,11 +982,11 @@ fdef("FILE-SIZE",9,0 ,FILEsubSIZE)
 		call	mtell
 		cmp		$-1,%eax
 		je		FILES
-		mov		%eax,4*2(%rbp)
+		mov		%eax,8(%rbp)
 		movl	$0,(%rbp)
 		xor		%eax,%eax
 		ret
-FILES:	mov		%eax,4*2(%rbp)
+FILES:	mov		%eax,8(%rbp)
 		mov		%rax,(%rbp)
 		ret
 
@@ -1031,11 +1049,11 @@ fdef("_QTOUSER-VALUE-CODE",0x13 ,0 , _QTOUSERsubVALUEsubCODE)
 		add		%r14,%rbx
 		mov		%rax,(%rbx)
 		mov		(%rbp),%rax
-	    lea		4*2(%rbp),%rbp
+	    lea		8(%rbp),%rbp
 		retq
 
 fdef("_QUSER-VALUE-CODE",17 ,0 ,_QUSERsubVALUEsubCODE)
-       lea	-4*2(%rbp),%rbp
+       lea	-8(%rbp),%rbp
 		mov %rax,(%rbp)
 		pop %rax
 		mov (%rax),%eax
@@ -1045,7 +1063,7 @@ fdef("_QUSER-VALUE-CODE",17 ,0 ,_QUSERsubVALUEsubCODE)
 
  fdef("_QCONSTANT-CODE",0xF ,0 ,_QCONSTANTsubCODE)
     .short 0xdb88  // mov    %bl,%bl  flag for TO
-    lea	-4*2(%rbp),%rbp
+    lea	-8(%rbp),%rbp
 	mov %rax,(%rbp)
 	pop %rax
 	mov (%rax),%rax
@@ -1163,7 +1181,7 @@ fdef("CLITERAL-CODE",0xD ,0 ,CLITERALsubCODE)
  .int _CLITERALsubCODE
  call _TOVALUEsubCODE
 fdef("_CLITERAL-CODE",0xE ,0 ,_CLITERALsubCODE)
-   lea	-4*2(%rbp),%rbp
+   lea	-8(%rbp),%rbp
    mov %rax,(%rbp)
    pop %rax
    movzbl (%rax),%ebx
@@ -1180,14 +1198,14 @@ fdef("_TOUSER-VALUE-CODE",0x12 ,0 ,_TOUSERsubVALUEsubCODE)
 		add		%r14d,%ebx
 		mov		%eax,(%rbx)
 		mov		(%rbp),%rax
-	    lea		4*2(%rbp),%rbp
+	    lea		8(%rbp),%rbp
 		retq
 fdef("_TOVALUE-CODE",0xD ,0 ,_TOVALUEsubCODE)
 		pop		%rbx
 		lea		-9(%rbx),%ebx
 		mov		%eax,(%rbx)
 		mov		(%rbp),%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		retq
 
 fdef("_QTOVALUE-CODE",0xE ,0 ,_QTOVALUEsubCODE)
@@ -1195,7 +1213,7 @@ fdef("_QTOVALUE-CODE",0xE ,0 ,_QTOVALUEsubCODE)
 		lea		(%rbx),%ebx
 		mov		%eax,(%rbx)
 		mov		(%rbp),%rax
-		lea		4*2(%rbp),%rbp
+		lea		8(%rbp),%rbp
 		retq
 
 fdef("_VECT-CODE",0xA ,0 ,_VECTsubCODE)
@@ -1204,7 +1222,7 @@ fdef("_VECT-CODE",0xA ,0 ,_VECTsubCODE)
 		jmp		%rbx
 
 fdef("_USER-VALUE-CODE",0x10 ,0 ,_USERsubVALUEsubCODE)
-       lea	-4*2(%rbp),%rbp
+       lea	-8(%rbp),%rbp
 		mov %rax,(%rbp)
 		pop %rax
 		mov (%rax),%eax
@@ -1215,7 +1233,7 @@ fdef("USER+",0x5 ,0 ,USERadd)
  .byte 0x3 ,0xC7
  .byte 0xC3
 fdef("_USER-CODE",0xA ,0 ,_USERsubCODE)
-       lea	-4*2(%rbp),%rbp
+       lea	-8(%rbp),%rbp
 		mov %rax,(%rbp)
 		mov %rax,(%rbp)
 		mov %rax,(%rbp)
@@ -1224,7 +1242,7 @@ fdef("_USER-CODE",0xA ,0 ,_USERsubCODE)
 		add %r14,%rax
 		retq
  fdef("_CONSTANT-CODE",0xE ,0 ,_CONSTANTsubCODE)
-   lea	-4*2(%rbp),%rbp
+   lea	-8(%rbp),%rbp
 	mov %rax,(%rbp)
 	pop %rax
 	mov (%rax),%eax
@@ -1232,7 +1250,7 @@ fdef("_USER-CODE",0xA ,0 ,_USERsubCODE)
 	retq
 
 fdef("_VALUE-CODE",0xB ,0 ,_VALUEsubCODE)
-   lea	-4*2(%rbp),%rbp
+   lea	-8(%rbp),%rbp
 	mov %rax,(%rbp)
 	pop %rax
 	mov (%rax),%eax
@@ -1240,14 +1258,14 @@ fdef("_VALUE-CODE",0xB ,0 ,_VALUEsubCODE)
 	retq
 
 fdef("_QVALUE-CODE",0xC ,0 ,_QVALUEsubCODE)
-   lea	-4*2(%rbp),%rbp
+   lea	-8(%rbp),%rbp
 	mov %rax,(%rbp)
 	pop %rax
 	mov 4+5(%rax),%rax
 	retq
 
 fdef("_CREATE-CODE",0xC ,0 ,_CREATEsubCODE)
-   lea	-4*2(%rbp),%rbp
+   lea	-8(%rbp),%rbp
  	mov %rax,(%rbp)
  	pop %rax
 	retq
