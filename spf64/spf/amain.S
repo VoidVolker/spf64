@@ -750,28 +750,31 @@ fdef("NAME>F",6,0,NAMEgreatF)
 		retq
 
 fdef("FILL",4,0,FILL)
-		mov		(%rbp),%rcx
-		mov		4*2(%rbp),%rdi
-		cld
-		mov		%rcx,%rbx
-		and		$3,%rbx
-		jne		FILL49
-		mov		%rax,%rbx
-		shl		$8,%rax
-		or		%rbx,%rax
-		shl		$8,%rax
-		or		%rbx,%rax
-		shl		$8,%rax
-		or		%rbx,%rax
-		mov		%rcx,%rbx
-		sar		$0x2,%rcx
-		rep		stos %rax,%es:(%rdi)
-		mov		%rbx,%rcx
-		and		$0x3,%rcx
-FILL49:	rep		stos %al,%es:(%rdi)
-		lea		0xc*2(%rbp),%rbp
-		mov		-4*2(%rbp),%rax
-		retq
+        mov     (%rbp),%rcx
+        mov     4*2(%rbp),%rdi
+        cld
+        mov     %rcx,%rbx
+        and     $7,%rbx
+        jne     FILL_R
+        mov     %rax,%rbx
+        mov     %rax,%rbx
+        shl     $8,%rax
+        or      %rbx,%rax
+        mov     %rax,%rbx
+        shl     $16,%rax
+        or      %rbx,%rax
+        mov     %rax,%rbx
+        shl     $32,%rax
+        or      %rbx,%rax
+        mov     %rcx,%rbx
+        sar     $0x3,%rcx
+        rep     stos %rax,%es:(%rdi)
+        mov     %rbx,%rcx
+        and     $0x7,%rcx
+FILL_R: rep     stos %al,%es:(%rdi)
+        lea     0xc*2(%rbp),%rbp
+        mov     -4*2(%rbp),%rax
+        retq
 
 fdef("CMOVE>",6,0,CMOVEgreat)
 		mov		%rax,%rcx
