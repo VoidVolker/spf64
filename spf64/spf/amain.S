@@ -1080,14 +1080,14 @@ fdef("_QTOUSER-VALUE-CODE",19 ,0 , _QTOUSERsubVALUEsubCODE)
 fdef("_QUSER-VALUE-CODE",17 ,0 ,_QUSERsubVALUEsubCODE)
         lea     -8(%rbp),%rbp
         mov     %rax,(%rbp)
-        pop     %rax
+        popq    %rax
         mov     (%rax),%eax
         add     %r14,%rax
         mov     (%rax),%rax
         retq
 
 fdef("_QUSER-VECT-CODE",16 ,0 ,_QUSERsubVECTsubCODE)
-        pop     %rbx
+        popq    %rbx
         mov     (%rbx),%ebx
         add     %r14,%rbx
         mov     (%rbx),%rbx
@@ -1243,7 +1243,7 @@ fdef("_TOVALUE-CODE",0xD ,0 ,_TOVALUEsubCODE)
 fdef("_QTOVALUE-CODE",0xE ,0 ,_QTOVALUEsubCODE)
         pop     %rbx
         lea     (%rbx),%rbx
-        mov     %eax,(%rbx)
+        mov     %rax,(%rbx)
         mov     (%rbp),%rax
         lea     8(%rbp),%rbp
         retq

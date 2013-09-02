@@ -1,0 +1,1174 @@
+Archive member included because of file (symbol)
+
+/usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+                              /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o (__libc_csu_fini)
+
+Allocating common symbols
+Common symbol       size              file
+
+FP                  0x8               main.o
+HSPSAVE             0x8               amain.o
+FPBuf               0x1f50            main.o
+BYELEVEL            0x8               amain.o
+_Stekc              0x5000            amain.o
+ARGV1               0x8               main.o
+ii                  0x4               main.o
+buf                 0x28              main.o
+T_YDP0              0x4000            amain.o
+DP_BUFF             0x9c4000          amain.o
+tios0               0x3c              main.o
+CIPAddr             0x4               clibs.o
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+ .gnu_debuglink
+                0x0000000000000000        0xc /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crti.o
+ .gnu_debuglink
+                0x0000000000000000        0xc /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crti.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 clibs.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
+ .gnu_debuglink
+                0x0000000000000000        0xc /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crti.o
+LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
+LOAD amain.o
+LOAD main.o
+LOAD clibs.o
+LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/libdl.so
+LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/libgcc.a
+LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/libgcc_s.so
+LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/libc.so
+START GROUP
+LOAD /lib/x86_64-linux-gnu/libc.so.6
+LOAD /usr/lib/x86_64-linux-gnu/libc_nonshared.a
+LOAD /lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+END GROUP
+LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/libgcc.a
+LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/libgcc_s.so
+LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
+LOAD /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
+                0x0000000000400000                PROVIDE (__executable_start, 0x400000)
+                0x0000000000400200                . = (0x400000 + SIZEOF_HEADERS)
+
+.interp         0x0000000000400200       0x1c
+ *(.interp)
+ .interp        0x0000000000400200       0x1c /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+
+.note.ABI-tag   0x000000000040021c       0x20
+ .note.ABI-tag  0x000000000040021c       0x20 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+
+.note.gnu.build-id
+                0x000000000040023c       0x24
+ *(.note.gnu.build-id)
+ .note.gnu.build-id
+                0x000000000040023c       0x24 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+
+.hash           0x0000000000400260      0x144
+ *(.hash)
+ .hash          0x0000000000400260      0x144 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+
+.gnu.hash       0x00000000004003a8       0x24
+ *(.gnu.hash)
+ .gnu.hash      0x00000000004003a8       0x24 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+
+.dynsym         0x00000000004003d0      0x3f0
+ *(.dynsym)
+ .dynsym        0x00000000004003d0      0x3f0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+
+.dynstr         0x00000000004007c0      0x155
+ *(.dynstr)
+ .dynstr        0x00000000004007c0      0x155 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+
+.gnu.version    0x0000000000400916       0x54
+ *(.gnu.version)
+ .gnu.version   0x0000000000400916       0x54 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+
+.gnu.version_d  0x0000000000400970        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+
+.gnu.version_r  0x0000000000400970       0x20
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000000400970       0x20 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+
+.rela.dyn       0x0000000000400990       0x30
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ .rela.text     0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ .rela.data     0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ .rela.got      0x0000000000400990       0x18 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ .rela.bss      0x00000000004009a8       0x18 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+ *(.rela.ldata .rela.ldata.* .rela.gnu.linkonce.l.*)
+ *(.rela.lbss .rela.lbss.* .rela.gnu.linkonce.lb.*)
+ *(.rela.lrodata .rela.lrodata.* .rela.gnu.linkonce.lr.*)
+ *(.rela.ifunc)
+
+.rela.plt       0x00000000004009c0      0x390
+ *(.rela.plt)
+ .rela.plt      0x00000000004009c0      0x390 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+                0x0000000000400d50                PROVIDE (__rela_iplt_start, .)
+ *(.rela.iplt)
+ .rela.iplt     0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+                0x0000000000400d50                PROVIDE (__rela_iplt_end, .)
+
+.init           0x0000000000400d50        0xe
+ *(.init)
+ .init          0x0000000000400d50        0x9 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crti.o
+                0x0000000000400d50                _init
+ .init          0x0000000000400d59        0x5 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
+
+.plt            0x0000000000400d60      0x270
+ *(.plt)
+ .plt           0x0000000000400d60      0x270 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+                0x0000000000400d70                free@@GLIBC_2.2.5
+                0x0000000000400d80                puts@@GLIBC_2.2.5
+                0x0000000000400d90                clone@@GLIBC_2.2.5
+                0x0000000000400da0                strtod@@GLIBC_2.2.5
+                0x0000000000400db0                setsockopt@@GLIBC_2.2.5
+                0x0000000000400dc0                write@@GLIBC_2.2.5
+                0x0000000000400dd0                getpid@@GLIBC_2.2.5
+                0x0000000000400de0                strlen@@GLIBC_2.2.5
+                0x0000000000400df0                chdir@@GLIBC_2.2.5
+                0x0000000000400e00                htons@@GLIBC_2.2.5
+                0x0000000000400e10                printf@@GLIBC_2.2.5
+                0x0000000000400e20                strrchr@@GLIBC_2.2.5
+                0x0000000000400e30                lseek@@GLIBC_2.2.5
+                0x0000000000400e40                memset@@GLIBC_2.2.5
+                0x0000000000400e50                ioctl@@GLIBC_2.2.5
+                0x0000000000400e60                close@@GLIBC_2.2.5
+                0x0000000000400e70                isspace@@GLIBC_2.2.5
+                0x0000000000400e80                read@@GLIBC_2.2.5
+                0x0000000000400e90                __libc_start_main@@GLIBC_2.2.5
+                0x0000000000400ea0                fgets@@GLIBC_2.2.5
+                0x0000000000400eb0                gethostbyname@@GLIBC_2.2.5
+                0x0000000000400ec0                kill@@GLIBC_2.2.5
+                0x0000000000400ed0                malloc@@GLIBC_2.2.5
+                0x0000000000400ee0                listen@@GLIBC_2.2.5
+                0x0000000000400ef0                ntohs@@GLIBC_2.2.5
+                0x0000000000400f00                bind@@GLIBC_2.2.5
+                0x0000000000400f10                tcgetattr@@GLIBC_2.2.5
+                0x0000000000400f20                tcsetattr@@GLIBC_2.2.5
+                0x0000000000400f30                open@@GLIBC_2.2.5
+                0x0000000000400f40                perror@@GLIBC_2.2.5
+                0x0000000000400f50                bzero@@GLIBC_2.2.5
+                0x0000000000400f60                accept@@GLIBC_2.2.5
+                0x0000000000400f70                sprintf@@GLIBC_2.2.5
+                0x0000000000400f80                getppid@@GLIBC_2.2.5
+                0x0000000000400f90                exit@@GLIBC_2.2.5
+                0x0000000000400fa0                connect@@GLIBC_2.2.5
+                0x0000000000400fb0                fork@@GLIBC_2.2.5
+                0x0000000000400fc0                socket@@GLIBC_2.2.5
+ *(.iplt)
+ .iplt          0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+
+.text           0x0000000000400fd0     0x11dc
+ *(.text.unlikely .text.*_unlikely)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ *(.text.hot .text.hot.*)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000400fd0       0x2c /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+                0x0000000000400fd0                _start
+ .text          0x0000000000400ffc       0x17 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crti.o
+ *fill*         0x0000000000401013        0xd 90909090
+ .text          0x0000000000401020       0xba /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
+ *fill*         0x00000000004010da        0x2 90909090
+ .text          0x00000000004010dc       0x5a amain.o
+                0x00000000004010e8                amain
+                0x00000000004010e8                tst0
+ *fill*         0x0000000000401136        0x2 90909090
+ .text          0x0000000000401138      0xb9e main.o
+                0x0000000000401138                _0e
+                0x000000000040115f                x1e
+                0x000000000040118b                ZTO_FLOAT
+                0x0000000000401209                F_dot_STR
+                0x0000000000401278                f_store
+                0x000000000040129e                f_plus
+                0x00000000004012e3                f_minus
+                0x0000000000401328                f_star
+                0x000000000040136d                f_slash
+                0x00000000004013b2                f_zero_less
+                0x00000000004013de                f_zero_equal
+                0x000000000040140a                f_less_than
+                0x000000000040144c                f_to_d
+                0x0000000000401462                f_fetch
+                0x000000000040148f                ss_to_f
+                0x00000000004014d3                d_to_f
+                0x0000000000401500                FCELL_
+                0x000000000040150b                f_init
+                0x000000000040151c                f_tst
+                0x0000000000401536                f_tst1
+                0x0000000000401546                f_tst2
+                0x0000000000401556                RWGet
+                0x0000000000401561                ROGet
+                0x000000000040156c                WOGet
+                0x0000000000401577                SEEK_SETGet
+                0x0000000000401582                O_CREATGet
+                0x000000000040158d                HPOINT
+                0x00000000004015ae                mtell
+                0x00000000004015cf                rmlseek
+                0x00000000004015f7                mlseek
+                0x0000000000401620                LOPEN
+                0x000000000040164c                LACCEPT
+                0x00000000004016a6                LARGV1
+                0x00000000004016b3                LZTYPE
+                0x00000000004016cd                LBYE
+                0x00000000004016db                save_term
+                0x00000000004016f0                restore_term
+                0x000000000040170a                echo_off
+                0x0000000000401744                echo_on
+                0x000000000040177e                C_KEY
+                0x0000000000401885                C_KEYQUERY
+                0x0000000000401994                C_ACCEPT
+                0x0000000000401b5d                L_ACCEPT
+                0x0000000000401c38                wherexy
+                0x0000000000401c8c                zzzz
+                0x0000000000401c9c                main
+ *fill*         0x0000000000401cd6        0x2 90909090
+ .text          0x0000000000401cd8      0x42b clibs.o
+                0x0000000000401cd8                c_sock_open
+                0x0000000000401dc1                c_sock_lconnect
+                0x0000000000401de2                hostname2ip
+                0x0000000000401e2a                c_getmyip
+                0x0000000000401f1f                c_create_server
+                0x000000000040200b                c_sock_accept
+                0x0000000000402082                c_sock_listen
+                0x000000000040209e                c_getpid
+                0x00000000004020a9                c_getppid
+                0x00000000004020b4                c_clone
+                0x00000000004020ec                c_exit
+ *fill*         0x0000000000402103        0xd 90909090
+ .text          0x0000000000402110       0x99 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+                0x0000000000402110                __libc_csu_fini
+                0x0000000000402120                __libc_csu_init
+ *fill*         0x00000000004021a9        0x3 90909090
+ .text          0x00000000004021ac        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
+ .text          0x00000000004021ac        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
+ *(.gnu.warning)
+
+.fini           0x00000000004021ac        0x9
+ *(.fini)
+ .fini          0x00000000004021ac        0x4 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crti.o
+                0x00000000004021ac                _fini
+ .fini          0x00000000004021b0        0x5 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
+                0x00000000004021b5                PROVIDE (__etext, .)
+                0x00000000004021b5                PROVIDE (_etext, .)
+                0x00000000004021b5                PROVIDE (etext, .)
+
+.rodata         0x00000000004021b8       0xee
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.cst4   0x00000000004021b8        0x4 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+                0x00000000004021b8                _IO_stdin_used
+ .rodata        0x00000000004021bc        0xc main.o
+ .rodata        0x00000000004021c8       0xde clibs.o
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr   0x00000000004022a8      0x1ec
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x00000000004022a8      0x1ec /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+
+.eh_frame       0x0000000000402498      0x7b4
+ *(.eh_frame)
+ .eh_frame      0x0000000000402498       0x40 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+ .eh_frame      0x00000000004024d8      0x5d0 main.o
+                                        0x5e0 (size before relaxing)
+ .eh_frame      0x0000000000402aa8      0x160 clibs.o
+                                        0x178 (size before relaxing)
+ .eh_frame      0x0000000000402c08       0x40 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+                                         0x50 (size before relaxing)
+ .eh_frame      0x0000000000402c48        0x4 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+                0x0000000000402c4c                . = (ALIGN (0x200000) - ((0x200000 - .) & 0x1fffff))
+                0x0000000000603000                . = DATA_SEGMENT_ALIGN (0x200000, 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x0000000000603000        0x0
+                0x0000000000603000                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x0000000000603000                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x0000000000603000        0x8
+                0x0000000000603000                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*) SORT(.ctors.*))
+ *(.init_array)
+ .init_array    0x0000000000603000        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+                0x0000000000603008                PROVIDE (__init_array_end, .)
+
+.fini_array     0x0000000000603008        0x8
+                0x0000000000603008                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*) SORT(.dtors.*))
+ *(.fini_array)
+ .fini_array    0x0000000000603008        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+                0x0000000000603010                PROVIDE (__fini_array_end, .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr            0x0000000000603010        0x8
+ *(.jcr)
+ .jcr           0x0000000000603010        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
+ .jcr           0x0000000000603010        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic        0x0000000000603018      0x1f0
+ *(.dynamic)
+ .dynamic       0x0000000000603018      0x1f0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+                0x0000000000603018                _DYNAMIC
+
+.got            0x0000000000603208        0x8
+ *(.got)
+ .got           0x0000000000603208        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+ *(.igot)
+                0x0000000000603210                . = DATA_SEGMENT_RELRO_END (., 0x18)
+
+.got.plt        0x0000000000603210      0x148
+ *(.got.plt)
+ .got.plt       0x0000000000603210      0x148 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+                0x0000000000603210                _GLOBAL_OFFSET_TABLE_
+ *(.igot.plt)
+ .igot.plt      0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+
+.data           0x0000000000603360     0xa228
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000000603360        0x4 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+                0x0000000000603360                data_start
+                0x0000000000603360                __data_start
+ .data          0x0000000000603364        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crti.o
+ *fill*         0x0000000000603364        0x4 00
+ .data          0x0000000000603368        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
+                0x0000000000603368                __dso_handle
+ .data          0x0000000000603370     0xa0f7 amain.o
+                0x000000000060337f                TT
+                0x0000000000603397                ZTYPE
+                0x00000000006033b5                HELLO
+                0x00000000006033e5                DUP
+                0x00000000006033ff                OVER
+                0x000000000060341d                SWAP
+                0x0000000000603439                ROT
+                0x000000000060345b                subROT
+                0x000000000060347d                DROP
+                0x00000000006034b7                _2DUP
+                0x00000000006034da                _2DROP
+                0x00000000006034f5                _2SWAP
+                0x0000000000603522                PICK
+                0x0000000000603539                TUCK
+                0x0000000000603559                Lload
+                0x000000000060356c                load
+                0x000000000060357f                Aload
+                0x0000000000603592                Cload
+                0x00000000006035a5                Wload
+                0x00000000006035b8                _2load
+                0x00000000006035d7                _2store
+                0x00000000006035fe                Lsave
+                0x000000000060361a                save
+                0x0000000000603639                addsave
+                0x0000000000603656                Csave
+                0x0000000000603673                Wsave
+                0x0000000000603691                _0save
+                0x00000000006036b1                _1addsave
+                0x00000000006036cb                equ
+                0x00000000006036eb                D0equ
+                0x000000000060371b                UMIN
+                0x000000000060373b                UMAX
+                0x000000000060375a                MIN
+                0x0000000000603779                MAX
+                0x0000000000603798                ABS
+                0x00000000006037b5                NEGATE
+                0x00000000006037cc                INVERT
+                0x00000000006037df                _1add
+                0x0000000000603804                _1sub
+                0x0000000000603818                _2sub
+                0x000000000060382c                _2add
+                0x0000000000603843                CELLS
+                0x000000000060385e                CELLsub
+                0x0000000000603875                CELLadd
+                0x000000000060388d                QCELLadd
+                0x00000000006038a4                COUNT
+                0x00000000006038c5                UgreatD
+                0x00000000006038e1                SgreatD
+                0x0000000000603904                HsubSTDOUT
+                0x0000000000603924                UMrslMOD
+                0x000000000060394a                Ursl
+                0x000000000060396c                UMmul
+                0x0000000000603986                mul
+                0x000000000060399c                rsl
+                0x00000000006039bc                one_rshift
+                0x00000000006039cf                one_lshift
+                0x00000000006039e2                mul_rsl
+                0x0000000000603a06                MOD
+                0x0000000000603a2b                rslMOD
+                0x0000000000603a4f                LSHIFT
+                0x0000000000603a70                RSHIFT
+                0x0000000000603a92                ARSHIFT
+                0x0000000000603ab1                queDUP
+                0x0000000000603ac9                great
+                0x0000000000603aea                less
+                0x0000000000603b0c                lessgreat
+                0x0000000000603b2b                _0lessgreat
+                0x0000000000603b41                _0great
+                0x0000000000603b67                Ugreat
+                0x0000000000603b82                Uless
+                0x0000000000603ba1                WITHIN
+                0x0000000000603bc7                OR
+                0x0000000000603be0                AND
+                0x0000000000603bf7                sub
+                0x0000000000603c25                DNEGATE
+                0x0000000000603c47                Dadd
+                0x0000000000603c67                Dsub
+                0x0000000000603c8b                Dequ
+                0x0000000000603cb8                DOVER
+                0x0000000000603cdd                PFdot
+                0x0000000000603d0d                ZTOFLOAT
+                0x0000000000603d24                Fadd
+                0x0000000000603d3f                Fsub
+                0x0000000000603d5a                Fmul
+                0x0000000000603d75                Frsl
+                0x0000000000603d90                _1e
+                0x0000000000603dab                Fsave
+                0x0000000000603dc2                Fload
+                0x0000000000603dda                FgreatD
+                0x0000000000603dff                DgreatF
+                0x0000000000603e21                Rload
+                0x0000000000603e3e                Rgreat
+                0x0000000000603e65                greatR
+                0x0000000000603e81                _2Rgreat
+                0x0000000000603eb2                _2greatR
+                0x0000000000603ed1                _2Rload
+                0x0000000000603ef8                SPload
+                0x0000000000603f14                SPsave
+                0x0000000000603f2d                RPload
+                0x0000000000603f4b                RPsave
+                0x0000000000603f71                UPGet
+                0x0000000000603f89                UPSet
+                0x0000000000603fa1                CDR
+                0x0000000000603fbb                NAMEgreat
+                0x0000000000603fd2                NAMEgreatF
+                0x0000000000603fe8                FILL
+                0x000000000060404b                CELLS_FILL
+                0x0000000000604078                CELLS_ERASE
+                0x00000000006040a6                CMOVEgreat
+                0x00000000006040dc                CMOVE
+                0x0000000000604107                ASCIIZgreat
+                0x0000000000604138                EXECUTE
+                0x0000000000604160                _SLITERALsubCODE
+                0x0000000000604199                NOOP
+                0x00000000006041a8                I
+                0x00000000006041d4                ADDxESPycomTOS
+                0x00000000006041f1                XDO
+                0x000000000060421b                QBRANCH
+                0x0000000000604237                XLIT
+                0x000000000060425e                ACCEPT1
+                0x0000000000604287                WRITEsubFILE
+                0x00000000006042b0                READsubFILE
+                0x00000000006042f1                REPOSITIONsubFILE
+                0x0000000000604325                ZOPENsubFILE
+                0x0000000000604352                CLOSEsubFILE
+                0x0000000000604374                FILEsubPOSITION
+                0x00000000006043af                FILEsubSIZE
+                0x00000000006043e5                HALT
+                0x0000000000604401                ALLOCATE
+                0x0000000000604432                FREE
+                0x0000000000604450                ZCD
+                0x000000000060446d                VECTsubCODE
+                0x000000000060448e                ticDUP_V
+                0x00000000006044b0                ticDROP_V
+                0x00000000006044d5                ticcABORTdticcend
+                0x00000000006044f5                ticTYPE
+                0x0000000000604523                _QTOUSERsubVALUEsubCODE
+                0x0000000000604557                _QUSERsubVALUEsubCODE
+                0x0000000000604586                _QUSERsubVECTsubCODE
+                0x00000000006045ad                _QCONSTANTsubCODE
+                0x00000000006045ce                WsubCNT
+                0x00000000006045e8                greatOUT
+                0x0000000000604605                CONTEXT
+                0x0000000000604623                SsubO
+                0x0000000000604640                CURRENT
+                0x000000000060465a                BASE
+                0x0000000000604676                CURSTR
+                0x0000000000604695                SOURCEsubID
+                0x00000000006046b3                PAD
+                0x00000000006046cd                ATIB
+                0x00000000006046e6                TIB
+                0x0000000000604704                greatIN
+                0x000000000060471e                nTIB
+                0x000000000060473a                DOESgreatA
+                0x0000000000604754                ERsubU
+                0x000000000060476e                ERsubA
+                0x000000000060478b                HANDLER
+                0x00000000006047a8                CURFILE
+                0x00000000006047c1                BLK
+                0x00000000006047dc                STATE
+                0x00000000006047f9                WARNING
+                0x0000000000604811                R_0
+                0x0000000000604829                S0
+                0x000000000060484b                TOVALUEsubCODE
+                0x0000000000604870                VALUEsubCODE
+                0x0000000000604898                QTOVALUEsubCODE
+                0x00000000006048be                QVALUEsubCODE
+                0x00000000006048e6                CONSTANTsubCODE
+                0x000000000060490a                USERsubCODE
+                0x0000000000604930                CREATEsubCODE
+                0x0000000000604958                CLITERALsubCODE
+                0x0000000000604981                _CLITERALsubCODE
+                0x00000000006049ad                SLITERALsubCODE
+                0x00000000006049da                _TOUSERsubVALUEsubCODE
+                0x0000000000604a08                _TOVALUEsubCODE
+                0x0000000000604a32                _QTOVALUEsubCODE
+                0x0000000000604a59                _VECTsubCODE
+                0x0000000000604a7c                _USERsubVALUEsubCODE
+                0x0000000000604a9f                USERadd
+                0x0000000000604ab9                _USERsubCODE
+                0x0000000000604aeb                _CONSTANTsubCODE
+                0x0000000000604b11                _VALUEsubCODE
+                0x0000000000604b38                _QVALUEsubCODE
+                0x0000000000604b5f                _CREATEsubCODE
+                0x0000000000604b7e                VOCsubLIST
+                0x0000000000604b9b                BYE
+                0x0000000000604bbb                FORTHsubWORDLIST
+                0x0000000000604bda                LAST
+                0x0000000000604bfd                USERsubOFFS
+                0x0000000000604c1e                UPPER_V
+                0x0000000000604c3e                TCYDP0
+                0x0000000000604c62                SOCK_OPEN
+                0x0000000000604c8e                GET_LOCALIP
+                0x0000000000604cb2                CREATE_SERVER
+                0x0000000000604cd1                SOCK_ACCEPT
+                0x0000000000604cf0                SOCK_LISTEN
+                0x0000000000604d0b                GET_PID
+                0x0000000000604d2a                GET_PPID
+                0x0000000000604d45                FORK
+                0x0000000000604d5e                qv
+                0x0000000000604d7c                vq
+                0x0000000000604da3                IMAGEBEGIN
+                0x0000000000604dc0                DP
+                0x0000000000604ddd                NNN
+                0x0000000000605eec                LASTWORD
+                0x0000000000605efc                Qcom
+                0x0000000000605f17                CONSTANT
+                0x0000000000605f41                INCLUDED
+                0x0000000000605f56                DO
+                0x0000000000605f6d                LOOP
+                0x0000000000605f89                ALIGNsubNOP
+                0x0000000000605ffa                HIDE
+                0x0000000000606026                SMUDGE
+                0x0000000000606078                CsubSMUDGE
+                0x0000000000606091                HLD
+                0x00000000006060ae                SHEADER
+                0x00000000006060cb                rskrsk
+                0x00000000006060e0                lsklsk
+                0x0000000000606132                endMODULE
+                0x0000000000606150                EXPORT
+                0x000000000060616f                MODULEdcoma
+                0x00000000006061f4                INIT
+                0x00000000006062d6                MM
+                0x00000000006062fa                COMMANDLINE
+                0x000000000060632f                RRR
+                0x000000000060634f                ARG
+                0x000000000060636a                TTF
+                0x000000000060638c                THTST
+                0x00000000006063ae                SPINIT
+                0x00000000006063cf                EMIT
+                0x00000000006063ee                TYPE
+                0x000000000060640c                ttt
+                0x0000000000606422                TTT
+                0x000000000060644a                TSTVAR
+                0x0000000000606469                TITLE
+                0x000000000060654e                REFILL
+                0x000000000060661e                QUERY
+                0x0000000000606658                CONSOLEsubHANDLES
+                0x000000000060666b                lessPREgreat
+                0x000000000060668b                PSKIP
+                0x00000000006066d8                PARSE
+                0x0000000000606727                PARSEsubNAME
+                0x0000000000606742                NextWord
+                0x000000000060675f                PARSEsubWORD
+                0x0000000000606798                UPPER_NW
+                0x00000000006067c9                UPPER
+                0x000000000060682f                UPC
+                0x0000000000606872                UPPER_SCR
+                0x00000000006068ac                ParseWord
+                0x00000000006068ea                SkipUpTo
+                0x000000000060693a                SkipWord
+                0x0000000000606972                OnNotDelimiter
+                0x00000000006069a7                SkipDelimiters
+                0x00000000006069f0                OnDelimiter
+                0x0000000000606a19                GetChar
+                0x0000000000606a5f                IsDelimiter
+                0x0000000000606a84                PeekChar
+                0x0000000000606aa4                CharAddr
+                0x0000000000606ad5                EndOfChunk
+                0x0000000000606b08                SOURCEsave
+                0x0000000000606b35                SOURCE
+                0x0000000000606b55                CrslL
+                0x0000000000606b7e                ZZZZRR
+                0x0000000000606b9e                RECURSE
+                0x0000000000606be4                AGAIN
+                0x0000000000606c79                REPEAT
+                0x0000000000606d12                WHILE
+                0x0000000000606d34                UNTIL
+                0x0000000000606e04                BEGIN
+                0x0000000000606e38                BREAK
+                0x0000000000606e54                THEN
+                0x0000000000606e70                ELSE
+                0x0000000000606ea7                IF
+                0x0000000000606edf                greatRESOLVE
+                0x0000000000606f4f                greatRESOLVE1
+                0x0000000000606f8d                greatORESOLVE
+                0x0000000000606ffe                greatORESOLVE1
+                0x000000000060703d                lessMARK
+                0x0000000000607055                greatMARK
+                0x0000000000607083                queBRANCHcom
+                0x00000000006070f3                CLITcom
+                0x0000000000607128                SLITcom
+                0x000000000060715a                ALIGNED
+                0x00000000006071d4                ALIGNsubBYTES
+                0x00000000006071ef                ALIGN
+                0x0000000000607222                dticcom
+                0x000000000060723d                Sdticcom
+                0x000000000060725c                Scom
+                0x000000000060728d                DLITcom
+                0x00000000006072ae                LITcom
+                0x00000000006072eb                RETcom
+                0x000000000060730e                BRANCHcom
+                0x000000000060735b                COMPILEcom
+                0x0000000000607377                _COMPILEcom
+                0x00000000006073b9                HERE
+                0x00000000006073da                READsubLINE
+                0x00000000006075be                _dos
+                0x00000000006075d9                _addr
+                0x00000000006075f3                _fp2
+                0x000000000060760d                _fp1
+                0x000000000060762d                UNIXsubLINES
+                0x000000000060766a                DOSsubLINES
+                0x00000000006076a1                LTL
+                0x00000000006076bd                LT
+                0x00000000006076e6                lpNumberOfBytesRead
+                0x0000000000607707                CREATEsubFILE
+                0x0000000000607732                OPENsubFILE
+                0x0000000000607763                ZslTOrsl
+                0x00000000006077d1                DELETEsubFILE
+                0x00000000006077f6                SA
+                0x0000000000607829                FILEsubBUFF
+                0x0000000000607843                KEYque
+                0x0000000000607863                KKEYque
+                0x000000000060787e                KEY
+                0x000000000060789d                KKEY
+                0x00000000006078bb                SPACES
+                0x00000000006078f7                SPACE
+                0x0000000000607911                BL
+                0x0000000000607939                _EMIT
+                0x000000000060796b                EMITVAR
+                0x0000000000607987                CR
+                0x00000000006079a5                _CR
+                0x00000000006079cd                WXTYPE
+                0x00000000006079f6                WXZTYPEsubBUFF
+                0x0000000000607b0e                TYPE1
+                0x0000000000607b31                ACCEPT
+                0x0000000000607b53                ACCEPT2
+                0x0000000000607bab                ACCEPT2_
+                0x0000000000607cca                DO1B
+                0x0000000000607f88                LAST_STP
+                0x00000000006080a2                ACC_END
+                0x00000000006081e0                ACC_HOME
+                0x0000000000608259                ACC_LEFT
+                0x0000000000608296                ACC_EMIT
+                0x00000000006082d6                ACC_DELETE
+                0x0000000000608359                ACC_INSERT
+                0x00000000006083d8                ATsubXYque
+                0x0000000000608440                READsubCDNUMBER
+                0x00000000006084b7                ATsubXY
+                0x0000000000608544                ANSI_ESCAPE
+                0x0000000000608575                ACCEPT0
+                0x000000000060872e                greatNUMBER
+                0x00000000006087e1                DIGIT
+                0x0000000000608903                cdotdticcend
+                0x000000000060891f                DUMP
+                0x0000000000608a60                PTYPE
+                0x0000000000608aad                greatPRT
+                0x0000000000608ae5                dot0
+                0x0000000000608b65                Hdot
+                0x0000000000608b98                Udot
+                0x0000000000608bb3                UdotR
+                0x0000000000608bd6                dotR
+                0x0000000000608bfb                DdotR
+                0x0000000000608c32                dot
+                0x0000000000608c4c                Ddot
+                0x0000000000608c6d                cDdotcend
+                0x0000000000608ca7                SIGN
+                0x0000000000608cd5                ngreat
+                0x0000000000608d08                nS
+                0x0000000000608d31                n
+                0x0000000000608dbb                lessn
+                0x0000000000608df9                HOLD
+                0x0000000000608e31                DECIMAL
+                0x0000000000608e55                HEX
+                0x0000000000608e79                MHdot
+                0x0000000000609278                ABORT
+                0x0000000000609299                CATCH
+                0x0000000000609306                lessSETsubEXCsubHANDLERgreat
+                0x0000000000609326                THROW
+                0x00000000006093a7                FATALsubHANDLER
+                0x00000000006093c5                CFL
+                0x00000000006093e6                GETsubCURRENT
+                0x0000000000609409                SETsubCURRENT
+                0x0000000000609426                RDROP
+                0x000000000060946e                Wcom
+                0x000000000060949b                Ccom
+                0x00000000006094cd                Lcom
+                0x00000000006094fd                ALLOT
+                0x000000000060951a                WORDS
+                0x000000000060953c                NLIST
+                0x0000000000609649                queCRsubBREAK
+                0x0000000000609744                VOCsubNAMEdot
+                0x00000000006097e1                PREVIOUS
+                0x0000000000609815                ALSO
+                0x0000000000609845                SETsubORDER
+                0x0000000000609917                ORDER
+                0x00000000006099ad                ONLY
+                0x00000000006099d0                LATEST
+                0x00000000006099f2                FORTH
+                0x0000000000609a18                GETsubORDER
+                0x0000000000609a8d                DEFINITIONS
+                0x0000000000609aaf                FIND1
+                0x0000000000609af4                SFIND
+                0x0000000000609ba4                SEARCHsubWORDLIST1
+                0x0000000000609c72                SEARCHsubWORDLIST
+                0x0000000000609c91                FIND
+                0x0000000000609cb6                WordByAddr
+                0x0000000000609d46                NEAR_NFA
+                0x0000000000609db4                WL_NEAR_NFA_M
+                0x0000000000609e4b                WL_NEAR_NFA_N
+                0x0000000000609e98                WL_NEAR_NFA
+                0x0000000000609ee5                N_UMAX
+                0x0000000000609f46                queVOC
+                0x0000000000609f72                queIMMEDIATE
+                0x0000000000609f9c                WORDLIST
+                0x000000000060a016                VOC
+                0x000000000060a055                PARload
+                0x000000000060a088                PARsave
+                0x000000000060a0bd                CLASSload
+                0x000000000060a100                CLASSsave
+                0x000000000060a146                IMMEDIATE
+                0x000000000060a186                addWORD
+                0x000000000060a1cc                addSWORD
+                0x000000000060a211                greatBODY
+                0x000000000060a231                andVOC
+                0x000000000060a251                andIMMEDIATE
+                0x000000000060a26a                IDdot
+                0x000000000060a28b                queLITERAL2
+                0x000000000060a2ad                queSLITERAL2
+                0x000000000060a42a                HEXsubSLITERAL
+                0x000000000060a512                queLITERAL1
+                0x000000000060a534                queSLITERAL1
+                0x000000000060a651                subsub
+                0x000000000060a669                FIELD
+                0x000000000060a6bc                slEOF
+                0x000000000060a6e7                EXIT
+                0x000000000060a6fb                end
+                0x000000000060a72f                xCOMPILEy
+                0x000000000060a74d                c
+                0x000000000060a7aa                dotc
+                0x000000000060a7cc                sl
+                0x000000000060a7f5                POSTPONE
+                0x000000000060a86e                TO
+                0x000000000060a938                REQUIRE
+                0x000000000060a97a                REQUIRED
+                0x000000000060a9c1                INCLUDED_
+                0x000000000060aa49                INCLUDEsubFILE
+                0x000000000060ab71                EVALUATE
+                0x000000000060ac2b                RESTOREsubSOURCE
+                0x000000000060ac85                SAVEsubSOURCE
+                0x000000000060acc4                FMAIN
+                0x000000000060ad09                MAIN1
+                0x000000000060ad3f                QUIT
+                0x000000000060ad6b                y
+                0x000000000060ad89                x
+                0x000000000060ada4                OK1
+                0x000000000060ae42                TYPE_BUFFadd
+                0x000000000060ae63                TYPE_BUFF
+                0x000000000060aee7                dotSN
+                0x000000000060afd4                INTERPRET
+                0x000000000060affb                andINTERPRET
+                0x000000000060b01f                INTERPRET_
+                0x000000000060b0a9                CHAR
+                0x000000000060b0c7                tic
+                0x000000000060b101                WORD
+                0x000000000060b197                queCOMP
+                0x000000000060b1d3                queSTACK
+                0x000000000060b227                DEPTH
+                0x000000000060b267                PROCESSsubERR
+                0x000000000060b28e                SOURCEsubIDsubXT
+                0x000000000060b2b2                queSLITERAL
+                0x000000000060b2d5                queLITERAL
+                0x000000000060b2f6                lessMAINgreat
+                0x000000000060b314                OKdot
+                0x000000000060b337                ERROR_DO
+                0x000000000060b4e2                ERRsubTYPE
+                0x000000000060b55a                cABORT1dticcend
+                0x000000000060b5aa                queERROR
+                0x000000000060b5e0                _ERROR_DO
+                0x000000000060b6c0                SAVEERR
+                0x000000000060b726                ERRFILE
+                0x000000000060b93f                ERRTIB
+                0x000000000060bb5a                cABORTdticcend
+                0x000000000060bb7a                ERROR
+                0x000000000060bb9a                ERgreatIN
+                0x000000000060bbbc                ERCURSTR
+                0x000000000060bbde                greatIN_WORD
+                0x000000000060bc00                SAVEERRque
+                0x000000000060bc20                UNLOOP
+                0x000000000060bc54                LEAVE
+                0x000000000060bc96                addLOOP
+                0x000000000060bd58                _LOOP
+                0x000000000060be25                queDO
+                0x000000000060bfee                _DO
+                0x000000000060c069                USER
+                0x000000000060c095                USERsubCREATE
+                0x000000000060c0dc                USERsubALIGNED
+                0x000000000060c131                USERsubHERE
+                0x000000000060c153                USERsubALLOT
+                0x000000000060c175                VOCABULARY
+                0x000000000060c1e2                dcoma
+                0x000000000060c209                subgreatVARIABLE
+                0x000000000060c22f                VECT
+                0x000000000060c269                VALUE
+                0x000000000060c2ab                VARIABLE
+                0x000000000060c2e1                cDOES1cend
+                0x000000000060c326                DOESgreat
+                0x000000000060c358                CREATE
+                0x000000000060c377                CREATED
+                0x000000000060c3a9                HEADER
+                0x000000000060c3c9                YSHEADER
+                0x000000000060c49d                queYDPgreatlessDP
+                0x000000000060c4ea                YDPgreatlessDP
+                0x000000000060c526                YDP_FL
+                0x000000000060c54d                YDP0
+                0x000000000060c56a                YDP
+                0x000000000060c58c                LASTsubNON
+                0x000000000060c5af                LASTsubCFA
+                0x000000000060c5cb                ABORTdtic
+                0x000000000060c5f8                xCHARy
+                0x000000000060c621                dotdtic
+                0x000000000060c645                Cdtic
+                0x000000000060c668                Sdtic
+                0x000000000060c691                CLITERAL
+                0x000000000060c6c1                SLITERAL
+                0x000000000060c713                _2LITERAL
+                0x000000000060c742                LITERAL
+                0x000000000060c76d                xticy
+                0x000000000060c78d                RrslW
+                0x000000000060c7a8                WrslO
+                0x000000000060c7c3                RrslO
+                0x000000000060c7e3                NOTFOUND
+                0x000000000060c864                FLITERAL
+                0x000000000060c891                FLITcom
+                0x000000000060c8b4                Fcom
+                0x000000000060c8df                FLIT
+                0x000000000060c916                greatFLOAT
+                0x000000000060c979                ZFLOAT
+                0x000000000060ca91                FCELL
+                0x000000000060caab                Fless
+                0x000000000060cac6                F0equ
+                0x000000000060cae1                F0less
+                0x000000000060cafb                Fdot
+                0x000000000060cb18                CHARS
+                0x000000000060cb27                com
+                0x000000000060cb4c                lessticgreat
+                0x000000000060cb93                RELload
+                0x000000000060cbb6                SHORTque
+                0x000000000060cbe7                ASCIIsubZ
+                0x000000000060cc2e                doladdsave
+                0x000000000060cc43                dolsave
+                0x000000000060cc67                TOUSERsubVALUEsubCODE
+                0x000000000060cc99                USERsubVALUEsubCODE
+                0x000000000060ccc5                DOESsubCODE
+                0x000000000060ccef                CaddPLACE
+                0x000000000060cd21                addPLACE
+                0x000000000060cd84                PLACE
+                0x000000000060cdca                dticCLIPdtic
+                0x000000000060cdfa                MAXCOUNTED
+                0x000000000060ce14                MOVE
+                0x000000000060ce8a                ON
+                0x000000000060ceae                OFF
+                0x000000000060ced6                xSEARCH
+                0x000000000060cf75                xCOMPARE
+                0x000000000060d04b                SEARCH
+                0x000000000060d0ea                COMPARE
+                0x000000000060d1c4                AASAVE0
+                0x000000000060d1e4                AASAVE
+                0x000000000060d203                BLANK
+                0x000000000060d220                ERASE
+                0x000000000060d240                _0MAX
+                0x000000000060d260                DABS
+                0x000000000060d28c                DBG1
+                0x000000000060d29d                DBG
+                0x000000000060d2b0                FALSE
+                0x000000000060d2ca                TRUE
+                0x000000000060d2e4                CELL
+                0x000000000060d300                xTHENy
+                0x000000000060d312                xIFy
+                0x000000000060d33b                xELSEy
+                0x000000000060d459                V_UPPER
+ *fill*         0x000000000060d467        0x1 00
+ .data          0x000000000060d468        0x0 main.o
+ *fill*         0x000000000060d468       0x18 00
+ .data          0x000000000060d480      0x108 clibs.o
+                0x000000000060d480                inet_addr_buff
+                0x000000000060d580                inet_addr_buf
+ .data          0x000000000060d588        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .data          0x000000000060d588        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
+ .data          0x000000000060d588        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
+
+.tm_clone_table
+                0x000000000060d588        0x0
+ .tm_clone_table
+                0x000000000060d588        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
+ .tm_clone_table
+                0x000000000060d588        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
+
+.data1
+ *(.data1)
+                0x000000000060d588                _edata = .
+                0x000000000060d588                PROVIDE (edata, .)
+                0x000000000060d588                __bss_start = .
+
+.bss            0x000000000060d5a0   0x9cf040
+ *(.dynbss)
+ .dynbss        0x000000000060d5a0        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+                0x000000000060d5a0                stdin@@GLIBC_2.2.5
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000000000060d5a8        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o
+ .bss           0x000000000060d5a8        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crti.o
+ .bss           0x000000000060d5a8        0x1 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
+ *fill*         0x000000000060d5a9        0x3 00
+ .bss           0x000000000060d5ac        0x0 amain.o
+ .bss           0x000000000060d5ac        0xc main.o
+                0x000000000060d5ac                key_query_char
+ .bss           0x000000000060d5b8        0x0 clibs.o
+ .bss           0x000000000060d5b8        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .bss           0x000000000060d5b8        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
+ .bss           0x000000000060d5b8        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crtn.o
+ *(COMMON)
+ *fill*         0x000000000060d5b8        0x8 00
+ COMMON         0x000000000060d5c0   0x9cd010 amain.o
+                0x000000000060d5c0                HSPSAVE
+                0x000000000060d5c8                BYELEVEL
+                0x000000000060d5d0                _Stekc
+                0x00000000006125d0                T_YDP0
+                0x00000000006165d0                DP_BUFF
+ *fill*         0x0000000000fda5d0       0x10 00
+ COMMON         0x0000000000fda5e0     0x1ffc main.o
+                0x0000000000fda5e0                FP
+                0x0000000000fda600                FPBuf
+                0x0000000000fdc550                ARGV1
+                0x0000000000fdc558                ii
+                0x0000000000fdc560                buf
+                0x0000000000fdc5a0                tios0
+ COMMON         0x0000000000fdc5dc        0x4 clibs.o
+                0x0000000000fdc5dc                CIPAddr
+                0x0000000000fdc5e0                . = ALIGN ((. != 0x0)?0x8:0x1)
+
+.lbss
+ *(.dynlbss)
+ *(.lbss .lbss.* .gnu.linkonce.lb.*)
+ *(LARGE_COMMON)
+                0x0000000000fdc5e0                . = ALIGN (0x8)
+
+.lrodata
+ *(.lrodata .lrodata.* .gnu.linkonce.lr.*)
+
+.ldata          0x00000000013dc5e0        0x0
+ *(.ldata .ldata.* .gnu.linkonce.l.*)
+                0x00000000013dc5e0                . = ALIGN ((. != 0x0)?0x8:0x1)
+                0x00000000013dc5e0                . = ALIGN (0x8)
+                0x00000000013dc5e0                _end = .
+                0x00000000013dc5e0                PROVIDE (end, .)
+                0x00000000013dc5e0                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x38
+ *(.comment)
+ .comment       0x0000000000000000       0x1c /usr/lib/gcc/x86_64-linux-gnu/4.7/crtbegin.o
+                                         0x1d (size before relaxing)
+ .comment       0x0000000000000000       0x1d main.o
+ .comment       0x0000000000000000       0x1d clibs.o
+ .comment       0x000000000000001c       0x1c /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+                                         0x1d (size before relaxing)
+ .comment       0x0000000000000000       0x1d /usr/lib/gcc/x86_64-linux-gnu/4.7/crtend.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0xa0
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x40 amain.o
+ .debug_aranges
+                0x0000000000000040       0x30 main.o
+ .debug_aranges
+                0x0000000000000070       0x30 clibs.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x1880
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0x44 amain.o
+ .debug_info    0x0000000000000044      0xde9 main.o
+ .debug_info    0x0000000000000e2d      0xa53 clibs.o
+
+.debug_abbrev   0x0000000000000000      0x4fa
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x12 amain.o
+ .debug_abbrev  0x0000000000000012      0x318 main.o
+ .debug_abbrev  0x000000000000032a      0x1d0 clibs.o
+
+.debug_line     0x0000000000000000     0x1721
+ *(.debug_line)
+ .debug_line    0x0000000000000000     0x130c amain.o
+ .debug_line    0x000000000000130c      0x285 main.o
+ .debug_line    0x0000000000001591      0x190 clibs.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x0000000000000000      0x9eb
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x430 main.o
+                                        0x496 (size before relaxing)
+ .debug_str     0x0000000000000430      0x5bb clibs.o
+                                        0x693 (size before relaxing)
+
+.debug_loc      0x0000000000000000     0x154c
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000     0x112c main.o
+ .debug_loc     0x000000000000112c      0x420 clibs.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000       0x40
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0x40 amain.o
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(spf64 elf64-x86-64)

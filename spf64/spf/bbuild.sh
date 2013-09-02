@@ -1,5 +1,5 @@
 cd spf
-rm img.ss
+rm -rf img.ss
 mv img.s img.ss
 ./spforig "src/gspf.f S\" img.s\" TSAVE CR BYE"
 chmod 777 "img.s"
