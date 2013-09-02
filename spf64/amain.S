@@ -618,6 +618,14 @@ fdef("D=",2,0,Dequ)
         lea 24(%rbp),%rbp
         retq
 
+fdef("2OVER",5,0,DOVER)
+        mov 16(%rbp),%rdx
+        mov %rax,-8(%rbp)
+        mov %rdx,-16(%rbp)
+        mov 8(%rbp),%rax
+        lea -16(%rbp),%rbp
+        retq
+
 fdef("PF.",3,0,PFdot)
         call    DUP
     mov %rsp,%rbx
