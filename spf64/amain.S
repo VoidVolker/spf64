@@ -608,6 +608,16 @@ fdef("D-",2,0,Dsub)
         lea 16(%rbp),%rbp
         retq
 
+fdef("D=",2,0,Dequ)
+        mov (%rbp),%rdx
+        xor 8(%rbp),%rax
+        xor 16(%rbp),%rdx
+        or  %rdx,%rax
+        sub $1,%rax
+        sbb %rax,%rax
+        lea 24(%rbp),%rbp
+        retq
+
 fdef("PF.",3,0,PFdot)
         call    DUP
     mov %rsp,%rbx
