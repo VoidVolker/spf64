@@ -190,6 +190,16 @@ fdef("2DROP",5,0 ,_2DROP)
         lea     8*2(%rbp),%rbp
         retq
 
+fdef("3DROP",5,0 ,_3DROP)
+        mov     16(%rbp),%rax
+        lea     24(%rbp),%rbp
+        retq
+
+fdef("4DROP",5,0 ,_4DROP)
+        mov     24(%rbp),%rax
+        lea     32(%rbp),%rbp
+        retq
+
 fdef("2SWAP",5,0 ,_2SWAP)
         mov 0(%rbp),%rcx
         mov 0x8(%rbp),%rdx
@@ -577,6 +587,11 @@ fdef("AND",3,0,AND)
         lea     8(%rbp),%rbp
         ret
 
+fdef("XOR",3,0,XOR)
+        xor     (%rbp),%rax
+        lea     8(%rbp),%rbp
+        ret
+
 fdef("-",1,0,sub)
 //sub:
         neg     %rax
@@ -616,6 +631,26 @@ fdef("D=",2,0,Dequ)
         sub $1,%rax
         sbb %rax,%rax
         lea 24(%rbp),%rbp
+        retq
+
+fdef("D>",2,0,D_m)
+        mov 16(%rbp),%rdx
+        cmp %rdx,(%rbp)
+        sbb 8(%rbp),%rax
+        mov $0,%rax
+        jge dmexit
+        dec %rax
+dmexit: lea 24(%rbp),%rbp
+        retq
+
+fdef("D<",2,0,D_b)
+        mov (%rbp),%rdx
+        cmp %rdx,16(%rbp)
+        sbb %rax,8(%rbp)
+        mov $0,%rax
+        jge dbexit
+        dec %rax
+dbexit: lea 24(%rbp),%rbp
         retq
 
 fdef("2OVER",5,0,DOVER)
@@ -1093,7 +1128,7 @@ fdef("_QUSER-VECT-CODE",16 ,0 ,_QUSERsubVECTsubCODE)
         mov     (%rbx),%rbx
         jmp     %rbx
 
- fdef("_QCONSTANT-CODE",15 ,0 ,_QCONSTANTsubCODE)
+fdef("_QCONSTANT-CODE",15 ,0 ,_QCONSTANTsubCODE)
     .short 0xdb88  // mov    %bl,%bl  flag for TO
     lea -8(%rbp),%rbp
     mov %rax,(%rbp)
@@ -1403,6 +1438,7 @@ fdef("FORK",4 ,0 ,FORK)
 // ================================================================================================
 // Дополнительные ассемблерные команды
 
+// Несколкьо слов для тестирования x64
 fdef("qv",2 ,0 ,qv)
         lea     -8(%rbp),%rbp
         mov     $0x0102030405060708,%rax
