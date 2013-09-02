@@ -1042,33 +1042,6 @@ fdef("'TYPE",5,0,ticTYPE )
  .int TYPE
  call _TOVALUEsubCODE
 
-fdef("_QTOUSER-VALUE-CODE",0x13 ,0 , _QTOUSERsubVALUEsubCODE)
-		pop		%rbx
-		sub		$4+5,%rbx
-		mov		(%rbx),%ebx
-		add		%r14,%rbx
-		mov		%rax,(%rbx)
-		mov		(%rbp),%rax
-	    lea		8(%rbp),%rbp
-		retq
-
-fdef("_QUSER-VALUE-CODE",17 ,0 ,_QUSERsubVALUEsubCODE)
-       lea	-8(%rbp),%rbp
-		mov %rax,(%rbp)
-		pop %rax
-		mov (%rax),%eax
-		add %r14,%rax
-		mov (%rax),%rax
-		retq
-
- fdef("_QCONSTANT-CODE",0xF ,0 ,_QCONSTANTsubCODE)
-    .short 0xdb88  // mov    %bl,%bl  flag for TO
-    lea	-8(%rbp),%rbp
-	mov %rax,(%rbp)
-	pop %rax
-	mov (%rax),%rax
-	retq
-
 fdef("W-CNT",0x5 ,0 , WsubCNT)
  call _USERsubCODE
  .int 0xD2C
@@ -1145,6 +1118,33 @@ fdef("R0",0x2 ,0 ,R_0)
 fdef("S0",0x2 ,0 ,S0)
  call _USERsubCODE
  .int T_S0-main_task
+
+fdef("_QTOUSER-VALUE-CODE",0x13 ,0 , _QTOUSERsubVALUEsubCODE)
+        pop     %rbx
+        sub     $4+5,%rbx
+        mov     (%rbx),%ebx
+        add     %r14,%rbx
+        mov     %rax,(%rbx)
+        mov     (%rbp),%rax
+        lea     8(%rbp),%rbp
+        retq
+
+fdef("_QUSER-VALUE-CODE",17 ,0 ,_QUSERsubVALUEsubCODE)
+       lea  -8(%rbp),%rbp
+        mov %rax,(%rbp)
+        pop %rax
+        mov (%rax),%eax
+        add %r14,%rax
+        mov (%rax),%rax
+        retq
+
+ fdef("_QCONSTANT-CODE",0xF ,0 ,_QCONSTANTsubCODE)
+    .short 0xdb88  // mov    %bl,%bl  flag for TO
+    lea -8(%rbp),%rbp
+    mov %rax,(%rbp)
+    pop %rax
+    mov (%rax),%rax
+    retq
 
 fdef("TOVALUE-CODE",0xC, 0, TOVALUEsubCODE)
  call _VALUEsubCODE
@@ -1250,7 +1250,7 @@ fdef("_USER-CODE",0xA ,0 ,_USERsubCODE)
 	retq
 
 fdef("_VALUE-CODE",0xB ,0 ,_VALUEsubCODE)
-   lea	-8(%rbp),%rbp
+    lea	-8(%rbp),%rbp
 	mov %rax,(%rbp)
 	pop %rax
 	mov (%rax),%eax

@@ -1,4 +1,4 @@
-\ REQUIRE INCLUDED_L ~mak/listing3.f 
+\ REQUIRE INCLUDED_L ~mak/listing3.f
 \ S" _mak/djgpp/gdis.f" INCLUDED
 : XLIT
   R> DUP CELL+ >R @ ;
@@ -53,7 +53,7 @@ DIS-OPT
 \ ����������: ( xt -- )
 \ �������� ��������� ���������� �����������, �������������� xt, �
 \ ��������� ���������� �������� �����������.
-\    CON>LIT 
+\    CON>LIT
 \    IF  INLINE?
 \      IF     INLINE,
 \      ELSE
@@ -90,14 +90,14 @@ DIS-OPT
              DUP 1- C@ H.   ." ,"
              DUP CDR DUP COUNT GTYPE ." -0x"
                          C@ H. ." )"
- CR  ." .globl " DUP COUNT GTYPE 
- CR  DUP COUNT GTYPE ." :" 
+ CR  ." .globl " DUP COUNT GTYPE
+ CR  DUP COUNT GTYPE ." :"
  R> OVER NAME> GDIS
  DUP NAME>C >R
- CDR 
+ CDR
  DUP TSAVE_LIMIT U<
  UNTIL DROP RDROP CR
- H-STDOUT CLOSE-FILE  THROW R> TO H-STDOUT 
+ H-STDOUT CLOSE-FILE  THROW R> TO H-STDOUT
 ;
 
 : RN> CHAR SWAP WordByAddr DROP C! ;
@@ -105,11 +105,11 @@ DIS-OPT
 ' CR CONSTANT '_CR
 
 : LOOP   \ 94
-  ?COMP 
+  ?COMP
   0x24 0x4FF W, C, \ inc dword [esp]
   HERE 2+ - DUP SHORT?   SetOP SetJP
   IF
-    0x71 C, C, \ jno short 
+    0x71 C, C, \ jno short
   ELSE
     4 - 0xF C, 0x81 C, , \ jno near
   THEN    SetOP
@@ -119,16 +119,16 @@ DIS-OPT
 
 : XDO
 [
- 0xBA C, 0x80000000 , 
- 0x2B C, 0x55 C, 0x0 C, 
- 0x8D C, 0x1C C, 0x2 C, 
+ 0xBA C, 0x80000000 ,
+ 0x2B C, 0x55 C, 0x0 C,
+ 0x8D C, 0x1C C, 0x2 C,
  0x8B C, 0x45 C, 0x4 C,
  0x48 C, 0x8D C, 0x6D C, 0x8 C,
  ]
  ;
 
 : DO
- ['] XDO _COMPILE, 
+ ['] XDO _COMPILE,
    0x68 C, DP @ 4 ALLOT
    0x52 C,    \ PUSH EDX
    0x53 C,    \ PUSH EBX
@@ -136,25 +136,25 @@ DIS-OPT
   DP @ \ DUP TO :-SET
 ; IMMEDIATE
 
-: ?DO 
-  ?COMP 
+: ?DO
+  ?COMP
 
   0x48 C, 0x8D C, 0x6D C, 16 C,  \  lea    0x8*2(%rbp),%rbp
   0xBB C, HERE 4 ALLOT			\  mov        ,%ebx
-  
-  0x3B C, 0x45 C, -16 C,       \  cmp    -0x8(%rbp),%eax  
+
+  0x3B C, 0x45 C, -16 C,       \  cmp    -0x8(%rbp),%eax
 
   0x75 C, 0x5 C,				\ jne
   0x8B C, 0x45 C, -8 C,       \ mov    -0x4(%rbp),%eax
   0xFF C, 0xE3 C,				\ jmpq   *%rbx
   0x53 C,						\ push   %rbx
-  0xBB C,  0x80000000 ,         \ mov    $0x80000000,%ebx 
+  0xBB C,  0x80000000 ,         \ mov    $0x80000000,%ebx
   0x2B C, 0x5D C, -16 C,       \ sub    -0x8(%rbp),%ebx
   0x53 C,						\ push   %rbx
   0x3 C, 0xD8 C, 				\ add    %eax,%ebx
   0x53 C,						\ push   %rbx
    0x48 C,  0x8B C, 0x45 C, -8 C, 		\ mov    -0x4(%rbp),%rax
-  
+
   DP @ \ DUP TO :-SET
 ; IMMEDIATE
 
@@ -173,8 +173,8 @@ DIS-OPT
 : LEAVE    \ 94
 \ �������������: ��������� ������������.
 \ ����������: ( -- ) ( R: loop-sys -- )
-\ ������ ������� ��������� �����. �������������� �������� ���������, ���� 
-\ ��� ����������. ���������� ���������� ����� �� ������ ����������� DO ... LOOP 
+\ ������ ������� ��������� �����. �������������� �������� ���������, ����
+\ ��� ����������. ���������� ���������� ����� �� ������ ����������� DO ... LOOP
 \ ��� DO ... +LOOP.
   0x48 C, 0x1024648D , \ lea esp, 0x10 [esp]
   0xC3 C,  \ ret
@@ -186,14 +186,14 @@ DIS-OPT
 
 : MDUMP DUMP ;
 
- 0xE9 ' COMPILE, C! 
+ 0xE9 ' COMPILE, C!
  ' TC-COMPILE, ' COMPILE, - 5 -  ' COMPILE, 1+ !
- 
+
  : ['] ' LIT, ; IMMEDIATE
 
 
 :  QBRANCH
- [ 0xC00B W, ] 
+ [ 0xC00B W, ]
   DROP  ;
 
 : M?BRANCH, ( ADDR -> )
@@ -206,7 +206,7 @@ DIS-OPT
   DUP IF DP @ CELL+ - THEN , \ DP @ TO LAST-HERE
 ;
 
-: IF 
+: IF
   ?COMP DP @ M?BRANCH, >MARK 1
 ; IMMEDIATE
 
@@ -241,19 +241,19 @@ USER-VALUE
 : L, , ;
 : Q,  , 0 , ;
 
-: VALUE 
-  HEADER  QVALUE-CODE 
+: VALUE
+  HEADER  QVALUE-CODE
   COMPILE, 0 L,
   QTOVALUE-CODE COMPILE, Q, ;
 
-\ EOF  
+\ EOF
 
 : >R  R> SWAP >R >R ;
-: R>  R> R> SWAP >R ;  
+: R>  R> R> SWAP >R ;
 
 : XLIT, ( N -- )
   ['] XLIT _COMPILE, , ;
 
 
-  0xE9 ' LIT, C! 
+  0xE9 ' LIT, C!
   ' XLIT, ' LIT, - 5 -  ' LIT, 1+ !
