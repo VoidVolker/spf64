@@ -600,6 +600,13 @@ fdef("D+",2,0,Dadd)
         lea 0x8*2(%rbp),%rbp
         retq
 
+fdef("D-",2,0,Dsub)
+        mov (%rbp),%rdx
+        sub %rdx,16(%rbp)
+        sbb %rax,8(%rbp)
+        mov 8(%rbp),%rax
+        lea 16(%rbp),%rbp
+        retq
 
 fdef("PF.",3,0,PFdot)
         call    DUP
