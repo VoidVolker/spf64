@@ -23,3 +23,4 @@
 
 # Set language Forth
 *.f linguist-language=Forth
+*.F linguist-language=Forth
